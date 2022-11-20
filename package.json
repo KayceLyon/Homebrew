@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.7.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "homebrew",
+  "description": "A CRUD app for creating and balancing homebrew elements in D&amp;D 5e.",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KayceLyon/Homebrew.git"
+  },
+  "author": "Kayce Lyon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KayceLyon/Homebrew/issues"
+  },
+  "homepage": "https://github.com/KayceLyon/Homebrew#readme"
+}
