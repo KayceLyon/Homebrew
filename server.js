@@ -6,7 +6,6 @@ require('dotenv').config();
 const PORT = process.env.PORT;
 
 const Spell = require('./models/spells');
-const Login = require('./models/users');
 
 const methodOverride = require('method-override');
 
@@ -30,8 +29,9 @@ mongoose.connect(mongodbURI, () => {
     console.log('Connected.');
 });
 
-app.use(express.urlencoded({extended: true}))
+
 app.use(express.static('public'));
+app.use(express.urlencoded({extended: true}))
 app.use('/users', userController);
 app.use('/sessions', sessionsController);
 

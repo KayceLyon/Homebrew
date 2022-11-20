@@ -1,15 +1,15 @@
 const bcrypt = require('bcrypt');
 const express = require('express');
 const sessions = express.Router();
-const User = requiire('../models/users.js');
+const User = require('../models/users.js');
 
 sessions.get('/new', (req, res) => {
-    res.render('sessions/new.ejs', {
+    res.render('login.ejs', {
         currentUser: req.session.currentUser
     });
 });
 
-sessions.post('/', (req, res) => {
+sessions.post('/login', (req, res) => {
     User.findOne({username: req.body.username}, (err, foundUser) => {
         if(err) {
             console.log(err);
