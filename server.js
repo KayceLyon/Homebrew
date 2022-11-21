@@ -3,7 +3,11 @@ const app = express();
 const session = require('express-session');
 
 require('dotenv').config();
-const PORT = process.env.PORT;
+
+let PORT = 3000;
+if(process.env.PORT){
+	PORT = process.env.PORT
+}
 
 const Spell = require('./models/spells');
 
@@ -25,21 +29,22 @@ const isAuthenticated = (req, res, next) => {
     }
   }
   
-mongoose.connect(mongodbURI, () => {
+mongoose.connect('mongodb+srv://klyon:<password>@homebrew.hethkpl.mongodb.net/?retryWrites=true&w=majority', () => {
     console.log('Connected.');
 });
-
-
-app.use(express.static('public'));
-app.use(express.urlencoded({extended: true}))
-app.use('/users', userController);
-app.use('/sessions', sessionsController);
 
 app.use(session({
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false
 }));
+
+app.use('/users', userController);
+app.use('/sessions', sessionsController);
+app.use(express.static('public'));
+app.use(express.urlencoded({extended: true}))
+
+
 
 // Sign-Up Page
 
