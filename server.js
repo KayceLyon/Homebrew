@@ -35,7 +35,7 @@ mongoose.connect('mongodb+srv://klyon:JqIO7Olb8If4S0kg@homebrew.hethkpl.mongodb.
 });
 
 app.use(session({
-    secret: process.env.SECRET,
+    secret: 'Ibu$0me3mEr0p1@',
     resave: false,
     saveUninitialized: false
 }));
