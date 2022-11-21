@@ -55,7 +55,7 @@ app.use('/sessions', sessionsController);
 // Routes for Spells
 
 // Create: New
-app.get('/spells/new', isAuthenticated, (req, res) => {
+app.get('/spells/new', (req, res) => {
     res.render('spellNew.ejs')
 });
 
