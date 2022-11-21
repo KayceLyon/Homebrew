@@ -29,9 +29,10 @@ const isAuthenticated = (req, res, next) => {
     }
   }
   
-mongoose.connect('mongodb+srv://klyon:<password>@homebrew.hethkpl.mongodb.net/?retryWrites=true&w=majority', () => {
+mongoose.connect('mongodb+srv://klyon:JqIO7Olb8If4S0kg@homebrew.hethkpl.mongodb.net/?retryWrites=true&w=majority', () => {
     console.log('Connected.');
 });
+
 
 app.use(session({
     secret: process.env.SECRET,
@@ -39,10 +40,11 @@ app.use(session({
     saveUninitialized: false
 }));
 
-app.use('/users', userController);
-app.use('/sessions', sessionsController);
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}))
+
+app.use('/users', userController);
+app.use('/sessions', sessionsController);
 
 
 
@@ -53,8 +55,8 @@ app.use(express.urlencoded({extended: true}))
 // Routes for Spells
 
 // Create: New
-app.get('/spells', (req, res) => {
-    res.render('new.ejs')
+app.get('/spells/new', (req, res) => {
+    res.render('spellNew.ejs')
 });
 
 app.post('/spells', (req, res) => {
@@ -68,7 +70,7 @@ app.post('/spells', (req, res) => {
 app.get('/spells', (req, res) => {
     Spell.find({}, (err, foundSpells) => {
         res.render(
-            'index.ejs', 
+            'spellIndex.ejs', 
             {
                 spells: foundSpells
             }
@@ -81,7 +83,7 @@ app.get('/spells', (req, res) => {
 app.get('/spells/:id', (req, res) => {
     Spell.findById(req.params.id, (err, spellId) => {
         res.render(
-            'show.ejs',
+            'spellShow.ejs',
             {
                 spells: spellId
             }
@@ -94,7 +96,7 @@ app.get('/spells/:id', (req, res) => {
 app.get('/spells/:id/edit', (req, res) => {
     Spell.findById(req.params.id, (err, spellId) => {
         res.render(
-            'show.ejs',
+            'spellShow.ejs',
             {
                 spells: spellId
             }
