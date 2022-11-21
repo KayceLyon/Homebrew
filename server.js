@@ -1,8 +1,9 @@
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
 const session = require('express-session');
 
-require('dotenv').config();
 
 let PORT = 3000;
 if(process.env.PORT){
@@ -33,7 +34,6 @@ mongoose.connect('mongodb+srv://klyon:JqIO7Olb8If4S0kg@homebrew.hethkpl.mongodb.
     console.log('Connected.');
 });
 
-
 app.use(session({
     secret: process.env.SECRET,
     resave: false,
@@ -55,11 +55,11 @@ app.use('/sessions', sessionsController);
 // Routes for Spells
 
 // Create: New
-app.get('/spells/new', (req, res) => {
+app.get('/spells/new', isAuthenticated, (req, res) => {
     res.render('spellNew.ejs')
 });
 
-app.post('/spells', (req, res) => {
+app.post('/spells', isAuthenticated, (req, res) => {
     Spell.create(req.body, (err, newSpell) => {
         res.redirect('/spells');
     });
@@ -67,7 +67,7 @@ app.post('/spells', (req, res) => {
 
 // Read: Index
 
-app.get('/spells', (req, res) => {
+app.get('/spells', isAuthenticated, (req, res) => {
     Spell.find({}, (err, foundSpells) => {
         res.render(
             'spellIndex.ejs', 
@@ -80,7 +80,7 @@ app.get('/spells', (req, res) => {
 
 // Read: Show
 
-app.get('/spells/:id', (req, res) => {
+app.get('/spells/:id', isAuthenticated, (req, res) => {
     Spell.findById(req.params.id, (err, spellId) => {
         res.render(
             'spellShow.ejs',
@@ -93,7 +93,7 @@ app.get('/spells/:id', (req, res) => {
 
 // Update: Edit
 
-app.get('/spells/:id/edit', (req, res) => {
+app.get('/spells/:id/edit', isAuthenticated, (req, res) => {
     Spell.findById(req.params.id, (err, spellId) => {
         res.render(
             'spellShow.ejs',
@@ -106,7 +106,7 @@ app.get('/spells/:id/edit', (req, res) => {
 
 // Update: Put
 
-app.put('/spells/:id', (req, res) => {
+app.put('/spells/:id', isAuthenticated, (req, res) => {
     Spell.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updateModel) => {
         res.redict('/spells');
     });
@@ -114,7 +114,7 @@ app.put('/spells/:id', (req, res) => {
 
 // Destroy: Delete
 
-app.delete('/spells/:id', (req, res) => {
+app.delete('/spells/:id', isAuthenticated, (req, res) => {
     Spell.findByIdAndRemove(req.params.id, (err, spell) => {
         res.redirect('/spells')
     })
