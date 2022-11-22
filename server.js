@@ -14,7 +14,7 @@ if(process.env.PORT){
 
 const userController = require('./controllers/usersController.js');
 const sessionsController = require('./controllers/sessionsController.js');
-const spellsController = require('./controllers/spellsController.js')
+const spellsController = require('./controllers/spellsController.js');
 
 const isAuthenticated = (req, res, next) => {
     if (req.session.currentUser) {

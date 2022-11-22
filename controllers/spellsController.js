@@ -3,12 +3,12 @@ const spells = express.Router()
 const Spell = require('../models/spells.js')
 
 // Create: New
-spells.get('/spells/new', (req, res) => {
+spells.get('/new', (req, res) => {
     res.render('spellNew.ejs')
 });
 
 // Create: Post
-spells.post('/spells', (req, res) => {
+spells.post('/', (req, res) => {
     Spell.create(req.body, (err, data) => {
         console.log(req.body);
             if(err){
@@ -16,12 +16,12 @@ spells.post('/spells', (req, res) => {
             } else {
             console.log(data)
            }
-        res.redirect('/spells');
+        res.redirect('/');
     });
 });
 
 // Read: Index
-spells.get('/spells', (req, res) => {
+spells.get('/', (req, res) => {
     Spell.find({}, (err, foundSpells) => {
         res.render(
             'spellIndex.ejs', 
@@ -33,7 +33,7 @@ spells.get('/spells', (req, res) => {
 });
 
 // Read: Show
-spells.get('/spells/:id', (req, res) => {
+spells.get('/:id', (req, res) => {
     Spell.findById(req.params.id, (err, spellId) => {
         res.render(
             'spellShow.ejs',
@@ -45,7 +45,7 @@ spells.get('/spells/:id', (req, res) => {
 });
 
 // Update: Edit
-spells.get('/spells/:id/edit', (req, res) => {
+spells.get('/:id/edit', (req, res) => {
     Spell.findById(req.params.id, (err, spellId) => {
         res.render(
             'spellEdit.ejs',
@@ -57,16 +57,16 @@ spells.get('/spells/:id/edit', (req, res) => {
 });
 
 // Update: Put
-spells.put('/spells/:id', (req, res) => {
+spells.put('/:id', (req, res) => {
     Spell.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updateModel) => {
-        res.redirect('/spells');
+        res.redirect('/');
     });
 });
 
 // Destroy: Delete
-spells.delete('/spells/:id', (req, res) => {
+spells.delete('/:id', (req, res) => {
     Spell.findByIdAndRemove(req.params.id, (err, spell) => {
-        res.redirect('/spells')
+        res.redirect('/')
     })
 });
 
