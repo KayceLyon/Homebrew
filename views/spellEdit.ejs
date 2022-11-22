@@ -10,8 +10,8 @@
     <div class="container">
         <h1>Edit Spell</h1>
         <form action="/spells/<%=spells._id%>?_method=PUT" method="POST">
-            <input type="text" value=<%=spells.name%> placeholder="Name">
-            <input type="submit" value="Add Spell">
+            <input type="text" name="name" value=<%=spells.name%> placeholder="Name">
+            <input type="submit" value="Edit Spell">
         </form>
     </div>
 </body>
