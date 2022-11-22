@@ -9,7 +9,7 @@ classes.get('/new', (req, res) => {
 
 // Create: Post
 classes.post('/', (req, res) => {
-    Spell.create(req.body, (err, data) => {
+    Class.create(req.body, (err, data) => {
         console.log(req.body);
             if(err){
            console.log(err)
@@ -22,7 +22,7 @@ classes.post('/', (req, res) => {
 
 // Read: Index
 classes.get('/', (req, res) => {
-    Spell.find({}, (err, foundSpells) => {
+    Class.find({}, (err, foundSpells) => {
         res.render(
             'classIndex.ejs', 
             {
@@ -34,7 +34,7 @@ classes.get('/', (req, res) => {
 
 // Read: Show
 classes.get('/:id', (req, res) => {
-    Spell.findById(req.params.id, (err, spellId) => {
+    Class.findById(req.params.id, (err, spellId) => {
         res.render(
             'classShow.ejs',
             {
@@ -46,7 +46,7 @@ classes.get('/:id', (req, res) => {
 
 // Update: Edit
 classes.get('/:id/edit', (req, res) => {
-    Spell.findById(req.params.id, (err, spellId) => {
+    Class.findById(req.params.id, (err, spellId) => {
         res.render(
             'classEdit.ejs',
             {
@@ -58,14 +58,14 @@ classes.get('/:id/edit', (req, res) => {
 
 // Update: Put
 classes.put('/:id', (req, res) => {
-    Spell.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updateModel) => {
+    Class.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updateModel) => {
         res.redirect('/classes');
     });
 });
 
 // Destroy: Delete
 classes.delete('/:id', (req, res) => {
-    Spell.findByIdAndRemove(req.params.id, (err, spell) => {
+    Class.findByIdAndRemove(req.params.id, (err, spell) => {
         res.redirect('/classes')
     })
 });
