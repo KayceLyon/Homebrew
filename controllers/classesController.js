@@ -45,7 +45,7 @@ classes.get('/:id', (req, res) => {
 });
 
 // Update: Edit
-classes.get('/classes/:id/edit', (req, res) => {
+classes.get('/:id/edit', (req, res) => {
     Class.findById(req.params.id, (err, classId) => {
         res.render(
             'classEdit.ejs',
@@ -57,7 +57,7 @@ classes.get('/classes/:id/edit', (req, res) => {
 });
 
 // Update: Put
-classes.put('/classes/:id', (req, res) => {
+classes.put('/:id', (req, res) => {
     Class.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updateModel) => {
         res.redirect('/classes');
     });
