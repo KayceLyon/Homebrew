@@ -46,7 +46,7 @@ classes.get('/:id', (req, res) => {
 
 // Update: Edit
 classes.get('/:id/edit', (req, res) => {
-    Class.findById(req.params.id, (err, spellId) => {
+    Class.findById(req.params.id, (err, classId) => {
         res.render(
             'classEdit.ejs',
             {
@@ -65,7 +65,7 @@ classes.put('/:id', (req, res) => {
 
 // Destroy: Delete
 classes.delete('/:id', (req, res) => {
-    Class.findByIdAndRemove(req.params.id, (err, spell) => {
+    Class.findByIdAndRemove(req.params.id, (err, classes) => {
         res.redirect('/classes')
     })
 });
