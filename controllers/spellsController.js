@@ -8,7 +8,7 @@ spells.get('/new', (req, res) => {
 });
 
 // Create: Post
-spells.post('/spells', (req, res) => {
+spells.post('/', (req, res) => {
     Spell.create(req.body, (err, data) => {
         console.log(req.body);
             if(err){
@@ -21,7 +21,7 @@ spells.post('/spells', (req, res) => {
 });
 
 // Read: Index
-spells.get('/spells', (req, res) => {
+spells.get('/', (req, res) => {
     Spell.find({}, (err, foundSpells) => {
         res.render(
             'spellIndex.ejs', 
