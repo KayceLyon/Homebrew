@@ -21,7 +21,7 @@ spells.post('/spells', (req, res) => {
 });
 
 // Read: Index
-spells.get('/', (req, res) => {
+spells.get('/spells', (req, res) => {
     Spell.find({}, (err, foundSpells) => {
         res.render(
             'spellIndex.ejs', 
