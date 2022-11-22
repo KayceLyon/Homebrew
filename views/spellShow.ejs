@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Spell Information</title>
 </head>
 <body>
-    
+    <div class="container" >
+        <h3><%=spells.name%></h3>
+            <p><%=spells.school%></p>
+            <p><%=spells.level%></p>
+            <p><%=spells.time%></p>
+            <a href="/spells/<%=spells.id%>/edit">
+                <button class="edit">Edit</button>
+            </a>
+            <form action="/cllctr/<%=spells.id%>?_method=DELETE" method="POST">
+                <input class="delete" type="submit" value="Delete">
+            </form>
+    </div>
 </body>
 </html>

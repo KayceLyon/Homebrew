@@ -6,14 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spells</title>
 </head>
-<body>
-    <div class="container">
-        <h1>Spells</h1>
-        <ul>
-            <% for(let i = 0; i < spells; i++) { %>
-                <li><%=spells[i]%></li>
+<header>
+    <h1>Homebrew: Spell Collection</h1>
+</header>
+<div class="header">
+    <h2>Your Collection</h2>
+    <a href="/spells/new"><button class="add">Add Homebrew Spell</button></a>
+</div>
+<div class="collection-container">
+    <!-- <ul> -->
+        <% for(let i = 0; i < albums.length; i++) { %>
+            <!-- <li> -->
+                <a href="/spells/<%=spells[i]._id%>"></a>
+            <!-- </li> -->
             <% } %>
-        </ul>
-    </div>
-</body>
+        <!-- </ul> -->
+</div>
 </html>
