@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Information</title>
+</head>
+<body>
+    <div class="container" >
+        <h3><%=classes.name%></h3>
+            <p><%=classes.school%></p>
+            <p><%=classes.level%></p>
+            <p><%=classes.time%></p>
+            <a href="/spells/<%=classes.id%>/edit">
+                <button class="edit">Edit</button>
+            </a>
+            <form action="/spells/<%=classes.id%>?_method=DELETE" method="POST">
+                <input class="delete" type="submit" value="Delete">
+            </form>
+    </div>
+</body>
+</html>
