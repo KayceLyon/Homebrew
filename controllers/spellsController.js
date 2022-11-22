@@ -3,7 +3,7 @@ const spells = express.Router()
 const Spell = require('../models/spells.js')
 
 // Create: New
-spells.get('/spells/new', (req, res) => {
+spells.get('/new', (req, res) => {
     res.render('spellNew.ejs')
 });
 
