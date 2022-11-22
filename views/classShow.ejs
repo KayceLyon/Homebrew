@@ -12,10 +12,10 @@
             <p><%=classes.school%></p>
             <p><%=classes.level%></p>
             <p><%=classes.time%></p>
-            <a href="/spells/<%=classes.id%>/edit">
+            <a href="/classes/<%=classes.id%>/edit">
                 <button class="edit">Edit</button>
             </a>
-            <form action="/spells/<%=classes.id%>?_method=DELETE" method="POST">
+            <form action="/classes/<%=classes.id%>?_method=DELETE" method="POST">
                 <input class="delete" type="submit" value="Delete">
             </form>
     </div>
