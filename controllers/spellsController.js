@@ -8,7 +8,7 @@ spells.get('/new', (req, res) => {
 });
 
 // Create: Post
-spells.post('/', (req, res) => {
+spells.post('/spells', (req, res) => {
     Spell.create(req.body, (err, data) => {
         console.log(req.body);
             if(err){
@@ -16,7 +16,7 @@ spells.post('/', (req, res) => {
             } else {
             console.log(data)
            }
-        res.redirect('/');
+        res.redirect('/spells');
     });
 });
 
