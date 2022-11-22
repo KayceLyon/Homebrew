@@ -13,8 +13,6 @@ if(process.env.PORT){
 
 const Spell = require('./models/spells.js');
 
-const mongodbURI = process.env.MONGODBURI;
-
 const userController = require('./controllers/usersController.js');
 const sessionsController = require('./controllers/sessionsController.js');
 
@@ -26,7 +24,7 @@ const isAuthenticated = (req, res, next) => {
     }
   }
   
-mongoose.connect('mongodb+srv://klyon:JqIO7Olb8If4S0kg@homebrew.hethkpl.mongodb.net/?retryWrites=true&w=majority', () => {
+mongoose.connect(MONGODBURI, () => {
     console.log('Connected.');
 });
 
