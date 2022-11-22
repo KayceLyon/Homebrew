@@ -18,6 +18,7 @@ if(process.env.PORT){
 const userController = require('./controllers/usersController.js');
 const sessionsController = require('./controllers/sessionsController.js');
 const spellsController = require('./controllers/spellsController.js');
+const classesController = require('./controllers/classesController.js');
 
 const isAuthenticated = (req, res, next) => {
     if (req.session.currentUser) {
@@ -46,6 +47,7 @@ app.use(methodOverride('_method'));
 app.use('/users', userController);
 app.use('/sessions', sessionsController);
 app.use('/spells', spellsController);
+app.use('/classes', classesController);
 
 //==============LISTENERS=============
 
