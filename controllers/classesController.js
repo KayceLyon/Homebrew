@@ -22,11 +22,11 @@ classes.post('/', (req, res) => {
 
 // Read: Index
 classes.get('/', (req, res) => {
-    Class.find({}, (err, foundSpells) => {
+    Class.find({}, (err, foundClasses) => {
         res.render(
             'classIndex.ejs', 
             {
-                spells: foundSpells
+                classes: foundClasses
             }
         )
     });
@@ -34,11 +34,11 @@ classes.get('/', (req, res) => {
 
 // Read: Show
 classes.get('/:id', (req, res) => {
-    Class.findById(req.params.id, (err, spellId) => {
+    Class.findById(req.params.id, (err, classId) => {
         res.render(
             'classShow.ejs',
             {
-                spells: spellId
+                classes: classId
             }
         )
     });
@@ -50,7 +50,7 @@ classes.get('/:id/edit', (req, res) => {
         res.render(
             'classEdit.ejs',
             {
-                spells: spellId
+                classes: classId
             }
         )
     });
