@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+<body>
+    <header>
+        <h1>Homebrew: Class Collection</h1>
+    </header>
+    <div class="header">
+        <h2>Your Collection</h2>
+        <a href="/classes/new"><button class="add">Add Homebrew Class</button></a>
+        <div class="collection-container">
+            <% for(let i = 0; i < classes.length; i++) { %>
+                    <a href="/classes/<%=classes[i]._id%>"><%=classes[i].name%></a>
+                <% } %>
+         </div>
+    </div>
+</body>
+</html>
