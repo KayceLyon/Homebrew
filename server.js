@@ -11,7 +11,7 @@ if(process.env.PORT){
 	PORT = process.env.PORT
 }
 
-const Spell = require('./models/spells');
+const Spell = require('./models/spells.js');
 
 const mongodbURI = process.env.MONGODBURI;
 
@@ -42,24 +42,24 @@ app.use(session({
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}))
 
+
 app.use('/users', userController);
 app.use('/sessions', sessionsController);
 
-
-
-// Sign-Up Page
-
-
-
 // Routes for Spells
-
 // Create: New
 app.get('/spells/new', (req, res) => {
     res.render('spellNew.ejs')
 });
 
 app.post('/spells', (req, res) => {
-    Spell.create(req.body, (err, newSpell) => {
+    Spell.create(req.body, (err, data) => {
+        console.log(req.body);
+            if(err){
+           console.log(err)
+            } else {
+            console.log(data)
+           }
         res.redirect('/spells');
     });
 });
@@ -107,7 +107,7 @@ app.get('/spells/:id/edit', (req, res) => {
 
 app.put('/spells/:id', (req, res) => {
     Spell.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updateModel) => {
-        res.redict('/spells');
+        res.redirect('/spells');
     });
 });
 
