@@ -10,14 +10,14 @@
 <header>
     <h1>Homebrew: Spell Collection</h1>
 </header>
-<div class="header">
-    <h2>Your Collection</h2>
-    <a href="/spells/new"><button class="add">Add Homebrew Spell</button></a>
-    <div class="collection-container">
-        <% for(let i = 0; i < spells.length; i++) { %>
-                <a href="/spells/<%=spells[i]._id%>"><%=spells[i].name%></a>
-            <% } %>
-</div>
-</div>
-</body>
-</html>
+    <div class="header">
+        <h2>Your Collection</h2>
+        <a href="/spells/new"><button class="add">Add Homebrew Spell</button></a>
+        <div class="collection-container">
+            <% for(let i = 0; i < spells.length; i++) { %>
+                    <a href="/spells/<%=spells[i]._id%>"><%=spells[i].name%></a>
+                <% } %>
+    </div>
+    </div>
+    </body>
+    </html>

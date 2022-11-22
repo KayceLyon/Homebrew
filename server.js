@@ -93,7 +93,7 @@ app.get('/spells/:id', (req, res) => {
 app.get('/spells/:id/edit', (req, res) => {
     Spell.findById(req.params.id, (err, spellId) => {
         res.render(
-            'spellShow.ejs',
+            'spellEdit.ejs',
             {
                 spells: spellId
             }
