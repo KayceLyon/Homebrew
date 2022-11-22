@@ -21,5 +21,5 @@ const classSchema = new Schema ({
     // conditions: {type: String},
 })
 
-const Class = mongoose.model('Class', spellSchema);
+const Class = mongoose.model('Class', classSchema);
 module.exports = Class;
