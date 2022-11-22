@@ -33,7 +33,7 @@ spells.get('/', (req, res) => {
 });
 
 // Read: Show
-spells.get('/spells/:id', (req, res) => {
+spells.get('/:id', (req, res) => {
     Spell.findById(req.params.id, (err, spellId) => {
         res.render(
             'spellShow.ejs',
