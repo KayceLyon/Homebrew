@@ -45,7 +45,7 @@ spells.get('/:id', (req, res) => {
 });
 
 // Update: Edit
-spells.get('/spells/:id/edit', (req, res) => {
+spells.get('/:id/edit', (req, res) => {
     Spell.findById(req.params.id, (err, spellId) => {
         res.render(
             'spellEdit.ejs',
@@ -57,14 +57,14 @@ spells.get('/spells/:id/edit', (req, res) => {
 });
 
 // Update: Put
-spells.put('/spells/:id', (req, res) => {
+spells.put('/:id', (req, res) => {
     Spell.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updateModel) => {
         res.redirect('/spells');
     });
 });
 
 // Destroy: Delete
-spells.delete('/spells/:id', (req, res) => {
+spells.delete('/:id', (req, res) => {
     Spell.findByIdAndRemove(req.params.id, (err, spell) => {
         res.redirect('/spells')
     })
