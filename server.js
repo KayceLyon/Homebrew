@@ -39,6 +39,7 @@ app.use(session({
 
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}))
+app.use(methodOverride('_method'));
 
 
 app.use('/users', userController);
@@ -63,7 +64,6 @@ app.post('/spells', (req, res) => {
 });
 
 // Read: Index
-
 app.get('/spells', (req, res) => {
     Spell.find({}, (err, foundSpells) => {
         res.render(
@@ -76,7 +76,6 @@ app.get('/spells', (req, res) => {
 });
 
 // Read: Show
-
 app.get('/spells/:id', (req, res) => {
     Spell.findById(req.params.id, (err, spellId) => {
         res.render(
@@ -89,7 +88,6 @@ app.get('/spells/:id', (req, res) => {
 });
 
 // Update: Edit
-
 app.get('/spells/:id/edit', (req, res) => {
     Spell.findById(req.params.id, (err, spellId) => {
         res.render(
@@ -102,7 +100,6 @@ app.get('/spells/:id/edit', (req, res) => {
 });
 
 // Update: Put
-
 app.put('/spells/:id', (req, res) => {
     Spell.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updateModel) => {
         res.redirect('/spells');
@@ -110,7 +107,6 @@ app.put('/spells/:id', (req, res) => {
 });
 
 // Destroy: Delete
-
 app.delete('/spells/:id', (req, res) => {
     Spell.findByIdAndRemove(req.params.id, (err, spell) => {
         res.redirect('/spells')
