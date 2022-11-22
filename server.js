@@ -11,10 +11,10 @@ if(process.env.PORT){
 	PORT = process.env.PORT
 }
 
-const Spell = require('./models/spells.js');
 
 const userController = require('./controllers/usersController.js');
 const sessionsController = require('./controllers/sessionsController.js');
+const spellsController = require('./controller/spellsController.js')
 
 const isAuthenticated = (req, res, next) => {
     if (req.session.currentUser) {
@@ -44,74 +44,7 @@ app.use(methodOverride('_method'));
 
 app.use('/users', userController);
 app.use('/sessions', sessionsController);
-
-// Routes for Spells
-// Create: New
-app.get('/spells/new', (req, res) => {
-    res.render('spellNew.ejs')
-});
-
-app.post('/spells', (req, res) => {
-    Spell.create(req.body, (err, data) => {
-        console.log(req.body);
-            if(err){
-           console.log(err)
-            } else {
-            console.log(data)
-           }
-        res.redirect('/spells');
-    });
-});
-
-// Read: Index
-app.get('/spells', (req, res) => {
-    Spell.find({}, (err, foundSpells) => {
-        res.render(
-            'spellIndex.ejs', 
-            {
-                spells: foundSpells
-            }
-        )
-    });
-});
-
-// Read: Show
-app.get('/spells/:id', (req, res) => {
-    Spell.findById(req.params.id, (err, spellId) => {
-        res.render(
-            'spellShow.ejs',
-            {
-                spells: spellId
-            }
-        )
-    });
-});
-
-// Update: Edit
-app.get('/spells/:id/edit', (req, res) => {
-    Spell.findById(req.params.id, (err, spellId) => {
-        res.render(
-            'spellEdit.ejs',
-            {
-                spells: spellId
-            }
-        )
-    });
-});
-
-// Update: Put
-app.put('/spells/:id', (req, res) => {
-    Spell.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updateModel) => {
-        res.redirect('/spells');
-    });
-});
-
-// Destroy: Delete
-app.delete('/spells/:id', (req, res) => {
-    Spell.findByIdAndRemove(req.params.id, (err, spell) => {
-        res.redirect('/spells')
-    })
-});
+app.use('/spells', spellsController);
 
 app.listen(PORT, () => {
     console.log('listening...');
