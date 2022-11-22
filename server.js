@@ -24,7 +24,7 @@ const isAuthenticated = (req, res, next) => {
     }
   }
   
-mongoose.connect(MONGODBURI, () => {
+mongoose.connect('mongodb+srv://klyon:JqIO7Olb8If4S0kg@homebrew.hethkpl.mongodb.net/?retryWrites=true&w=majority', () => {
     console.log('Connected.');
 });
 
