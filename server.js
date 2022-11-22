@@ -1,3 +1,5 @@
+//==============DEPENDENCIES===========
+
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
@@ -11,6 +13,7 @@ if(process.env.PORT){
 	PORT = process.env.PORT
 }
 
+//==============ROUTES================
 
 const userController = require('./controllers/usersController.js');
 const sessionsController = require('./controllers/sessionsController.js');
@@ -23,11 +26,9 @@ const isAuthenticated = (req, res, next) => {
       res.redirect('/sessions/new')
     }
   }
-  
-mongoose.connect('mongodb+srv://klyon:JqIO7Olb8If4S0kg@homebrew.hethkpl.mongodb.net/?retryWrites=true&w=majority', () => {
-    console.log('Connected.');
-});
 
+//==============MIDDLEWARE==============
+  
 app.use(session({
     /* Setting the secret in the .env file produced the following error when trying to perform heroku open:
        express-session deprecated req.secret; provide secret option at server.js:37:9. */
@@ -45,6 +46,12 @@ app.use(methodOverride('_method'));
 app.use('/users', userController);
 app.use('/sessions', sessionsController);
 app.use('/spells', spellsController);
+
+//==============LISTENERS=============
+
+mongoose.connect('mongodb+srv://klyon:JqIO7Olb8If4S0kg@homebrew.hethkpl.mongodb.net/?retryWrites=true&w=majority', () => {
+    console.log('Connected.');
+});
 
 app.listen(PORT, () => {
     console.log('listening...');
