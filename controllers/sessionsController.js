@@ -28,10 +28,6 @@ sessions.post('/login', (req, res) => {
 
 });
 
-sessions.get('/index', (req, res) => {
-    res.render('index.ejs')
-})
-
 sessions.delete('/', (req, res) => {
     req.session.destroy(() => {
         res.redirect('/');
