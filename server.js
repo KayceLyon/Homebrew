@@ -49,9 +49,9 @@ app.use('/sessions', sessionsController);
 app.use('/spells', spellsController);
 app.use('/classes', classesController);
 
-// app.get('/', (req, res) => {
-//     res.render('index.ejs');
-// })
+app.get('/', (req, res) => {
+    res.render('index.ejs');
+})
 
 //==============LISTENERS=============
 
