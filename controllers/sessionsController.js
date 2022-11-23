@@ -19,7 +19,7 @@ sessions.post('/login', (req, res) => {
         } else {
             if(bcrypt.compareSync(req.body.password, foundUser.password)) {
                 req.session.currentUser = foundUser;
-                res.redirect('/');
+                res.redirect('/index');
             } else {
                 res.send('<a href="/" Incorrect password. </a>');
             }
@@ -27,6 +27,10 @@ sessions.post('/login', (req, res) => {
     });
 
 });
+
+sessions.get('/index', (req, res) => {
+    res.render('index.ejs')
+})
 
 sessions.delete('/', (req, res) => {
     req.session.destroy(() => {
