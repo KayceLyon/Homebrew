@@ -7,10 +7,9 @@
 <body>
     <%- include('partials/nav.ejs') %>
 <header>
-    <h1>Homebrew: Spell Collection</h1>
+    <h1>Homebrew Spells</h1>
 </header>
     <div class="header">
-        <h2>Your Collection</h2>
         <a href="/spells/new"><button class="add">Add Homebrew Spell</button></a>
         <div class="collection-container">
             <% for(let i = 0; i < spells.length; i++) { %>
