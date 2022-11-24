@@ -50,14 +50,7 @@ app.use('/spells', spellsController);
 app.use('/classes', classesController);
 
 app.get('/', (req, res) => {
-    User.find({}, (err, foundUsers) => {
-        res.render(
-            'index.ejs', 
-            {
-                user: foundUsers
-            }
-        )
-    });
+    res.render('index.ejs')
 })
 
 //==============LISTENERS=============
