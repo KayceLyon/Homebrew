@@ -49,6 +49,10 @@ app.use('/sessions', sessionsController);
 app.use('/spells', spellsController);
 app.use('/classes', classesController);
 
+app.get('/index', (req, res) => {
+    res.redirect('/index.ejs')
+})
+
 //==============LISTENERS=============
 
 mongoose.connect('mongodb+srv://klyon:JqIO7Olb8If4S0kg@homebrew.hethkpl.mongodb.net/?retryWrites=true&w=majority', () => {
