@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('partials/head.ejs') %>
     <title>Spells</title>
 </head>
 <body>
+    <%- include('partials/nav.ejs') %>
 <header>
     <h1>Homebrew: Spell Collection</h1>
 </header>
@@ -19,5 +18,6 @@
                 <% } %>
     </div>
     </div>
+    <%- include('partials/script.ejs') %>
     </body>
     </html>
