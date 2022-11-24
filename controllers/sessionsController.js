@@ -9,7 +9,7 @@ sessions.get('/new', (req, res) => {
     });
 });
 
-sessions.post('/login', (req, res) => {
+sessions.post('/new', (req, res) => {
     User.findOne({username: req.body.username}, (err, foundUser) => {
         if(err) {
             console.log(err);
