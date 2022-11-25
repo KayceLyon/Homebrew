@@ -34,7 +34,9 @@
           <div class="cell">
             <div class="card">
               <div class="card-section">
-              <h4>Armor</h4>
+              <h4><% for(let i = 0; i < spells.length; i++) { %>
+                <a href="/spells/<%=spells[i]._id%>"><%=spells[i].name%></a>
+            <% } %></h4>
                 <p>Add Homebrew Armor</p>
               </div>
             </div>
