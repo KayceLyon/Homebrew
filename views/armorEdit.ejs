@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Armor</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Armor</h1>
+        <form action="/classes/<%=armor._id%>?_method=PUT" method="POST">
+            <input type="text" name="name" value=<%=armor.name%> placeholder="Name">
+            <input type="submit" value="Edit Armor">
+        </form>
+    </div>
+</body>
+</html>
