@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>Edit Armor</h1>
-        <form action="/classes/<%=armor._id%>?_method=PUT" method="POST">
+        <form action="/armor/<%=armor._id%>?_method=PUT" method="POST">
             <input type="text" name="name" value=<%=armor.name%> placeholder="Name">
             <input type="submit" value="Edit Armor">
         </form>
