@@ -60,18 +60,8 @@
         </div>
         <div class="nav-bar-right">
           <ul class="menu">
-            <% if (currentUser) { %>
-              <li>Welcome <%= currentUser.username %></li>
-              <li>
-                <form action="/sessions?_method=DELETE" method="POST">
-                  <input type="submit" value="Log Out" class="btn-small red" />
-                </form>
-              </li>
-              <% } else { %>
-              <li><a href="/users/new">SIGN-UP</a></li>
-              <li><a href="/sessions/new">LOGIN</a></li>
-              <% } %>
-            </ul>
+            <li class="hide-for-small-only"><a href="/users/new">SIGN-UP</a></li>
+            <li class="hide-for-small-only"><a href="/sessions/new">LOGIN</a></li>
             <li>
             <li>
               <button class="offcanvas-trigger" type="button" data-open="offCanvasRight">
