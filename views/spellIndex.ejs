@@ -31,13 +31,13 @@
     <%- include('partials/nav.ejs') %>
     <div class="grid-container">
         <div class="grid-x grid-margin-x small-up-2 medium-up-3">
+            <% for(let i = 0; i < spells.length; i++) { %>
           <div class="cell">
             <div class="card">
               <div class="card-section">
-              <h4><% for(let i = 0; i < spells.length; i++) { %>
+              <h4>
                 <a href="/spells/<%=spells[i]._id%>"><%=spells[i].name%></a>
             <% } %></h4>
-                <p>Add Homebrew Armor</p>
               </div>
             </div>
           </div>
