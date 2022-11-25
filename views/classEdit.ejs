@@ -9,6 +9,7 @@
     <title>New Class</title>
 </head>
 <body>
+    <%- include('partials/nav.ejs')
     <div class="container">
         <h1>Edit Class</h1>
         <form action="/classes/<%=classes._id%>?_method=PUT" method="POST">
@@ -16,5 +17,9 @@
             <input type="submit" value="Edit Class">
         </form>
     </div>
+    <script src="./css/Foundation-Sites-CSS/js/vendor/jquery.js"></script>
+    <script src="./css/Foundation-Sites-CSS/js/vendor/what-input.js"></script>
+    <script src="./css/Foundation-Sites-CSS/js/vendor/foundation.js"></script>
+    <script src="./css/Foundation-Sites-CSS/js/app.js"></script>
 </body>
 </html>
