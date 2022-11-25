@@ -4,7 +4,11 @@ const Spell = require('../models/spells.js')
 
 // Create: New
 spells.get('/new', (req, res) => {
-    res.render('spellNew.ejs')
+    res.render(
+        'spellNew.ejs',
+        {
+            currentUser: req.session.currentUser
+        })
 });
 
 // Create: Post
@@ -26,7 +30,8 @@ spells.get('/', (req, res) => {
         res.render(
             'spellIndex.ejs', 
             {
-                spells: foundSpells
+                spells: foundSpells,
+                currentUser: req.session.currentUser
             }
         )
     });
@@ -38,7 +43,8 @@ spells.get('/:id', (req, res) => {
         res.render(
             'spellShow.ejs',
             {
-                spells: spellId
+                spells: spellId,
+                currentUser: req.session.currentUser
             }
         )
     });
@@ -50,7 +56,8 @@ spells.get('/:id/edit', (req, res) => {
         res.render(
             'spellEdit.ejs',
             {
-                spells: spellId
+                spells: spellId,
+                currentUser: req.session.currentUser
             }
         )
     });
