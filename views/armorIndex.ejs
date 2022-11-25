@@ -2,25 +2,25 @@
 <html class="no-js" lang="en" dir="ltr">
   <head>
     <%- include('partials/head.ejs') %>
-    <title>Homebrew Spells</title>
+    <title>Homebrew Armor</title>
   </head>
 <body>
     <%- include('partials/nav.ejs') %>
     <div class="grid-container">
         <div class="grid-x grid-margin-x small-up-2 medium-up-3">
-            <% for(let i = 0; i < spells.length; i++) { %>
+            <% for(let i = 0; i < armor.length; i++) { %>
           <div class="cell">
             <div class="card">
               <div class="card-section">
               <h4>
-                <a href="/spells/<%=spells[i]._id%>"><%=spells[i].name%></a>
+                <a href="/armor/<%=armor[i]._id%>"><%=armor[i].name%></a>
             </h4>
               </div>
             </div>
           </div>
           <% } %>
     </div>
-    <a href="/spells/new"><button class="add">Add Homebrew Spell</button></a>
+    <a href="/armor/new"><button class="add">Add Homebrew Armor</button></a>
     <%- include('partials/script') %>
   </body>
 </html>
