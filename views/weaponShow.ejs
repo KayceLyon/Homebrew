@@ -7,14 +7,14 @@
 <body>
     <%- include('partials/nav.ejs') %> 
     <div class="container" >
-        <h1><%=weapons.name%></h1>
-            <p><%=weapons.school%></p>
-            <p><%=weapons.level%></p>
-            <p><%=weapons.time%></p>
-            <a href="/weapons/<%=weapons.id%>/edit">
+        <h1><%=weapon.name%></h1>
+            <p><%=weapon.school%></p>
+            <p><%=weapon.level%></p>
+            <p><%=weapon.time%></p>
+            <a href="/weapons/<%=weapon.id%>/edit">
                 <button class="edit">Edit</button>
             </a>
-            <form action="/armor/<%=weapons.id%>?_method=DELETE" method="POST">
+            <form action="/armor/<%=weapon.id%>?_method=DELETE" method="POST">
                 <input class="delete" type="submit" value="Delete">
             </form>
     </div>

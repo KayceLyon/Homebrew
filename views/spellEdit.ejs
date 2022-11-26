@@ -8,8 +8,8 @@
     <%- include('partials/nav.ejs') %> 
     <div class="container">
         <h1>Edit Spell</h1>
-        <form action="/spells/<%=spells._id%>?_method=PUT" method="POST">
-            <input type="text" name="name" value=<%=spells.name%> placeholder="Name">
+        <form action="/spells/<%=spell._id%>?_method=PUT" method="POST">
+            <input type="text" name="name" value=<%=spell.name%> placeholder="Name">
             <input type="submit" value="Edit Spell">
         </form>
     </div>
