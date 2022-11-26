@@ -26,7 +26,7 @@ weapons.get('/', (req, res) => {
         res.render(
             'weaponIndex.ejs', 
             {
-                Weapon: foundweapons
+                weapon: foundweapons
             }
         )
     });
@@ -38,7 +38,7 @@ weapons.get('/:id', (req, res) => {
         res.render(
             'weaponShow.ejs',
             {
-                Weapon: weaponsId
+                weapon: weaponsId
             }
         )
     });
@@ -50,7 +50,7 @@ weapons.get('/:id/edit', (req, res) => {
         res.render(
             'weaponEdit.ejs',
             {
-                Weapon: weaponsId
+                weapon: weaponsId
             }
         )
     });
