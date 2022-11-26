@@ -22,4 +22,4 @@ const weaponSchema = new Schema ({
 })
 
 const Weapon = mongoose.model('Weapon', weaponSchema);
-module.exports = Armor;
+module.exports = Weapon;
