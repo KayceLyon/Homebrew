@@ -41,10 +41,9 @@ app.use(session({
     saveUninitialized: false
 }));
 
-const path = require('path')
-app.use('/static',
-express.static(path.join(__dirname, 'public')));
-app.use(express.urlencoded({extended: true}))
+app.use(express.static('public'));
+app.use(express.static('public/css'));
+app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 
 
