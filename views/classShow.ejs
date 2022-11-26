@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('partials/head.ejs') %>
     <title>Class Information</title>
 </head>
 <body>
+    <%- include('partials/nav.ejs') %> 
     <div class="container" >
-        <h3><%=classes.name%></h3>
+        <h1><%=classes.name%></h1>
             <p><%=classes.school%></p>
             <p><%=classes.level%></p>
             <p><%=classes.time%></p>
@@ -19,5 +18,6 @@
                 <input class="delete" type="submit" value="Delete">
             </form>
     </div>
+    <%- include('partials/script.ejs') %>
 </body>
 </html>
