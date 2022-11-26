@@ -65,7 +65,7 @@ items.put('/:id', (req, res) => {
 
 // Destroy: Delete
 items.delete('/:id', (req, res) => {
-    Item.findByIdAndRemove(req.params.id, (err, feats) => {
+    Item.findByIdAndRemove(req.params.id, (err, items) => {
         res.redirect('/items')
     })
 });
