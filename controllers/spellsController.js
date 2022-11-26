@@ -30,7 +30,7 @@ spells.get('/', (req, res) => {
         res.render(
             'spellIndex.ejs', 
             {
-                spells: foundSpells,
+                spell: foundSpells,
                 currentUser: req.session.currentUser
             }
         )
@@ -43,7 +43,7 @@ spells.get('/:id', (req, res) => {
         res.render(
             'spellShow.ejs',
             {
-                spells: spellId,
+                spell: spellId,
                 currentUser: req.session.currentUser
             }
         )
@@ -56,7 +56,7 @@ spells.get('/:id/edit', (req, res) => {
         res.render(
             'spellEdit.ejs',
             {
-                spells: spellId,
+                spell: spellId,
                 currentUser: req.session.currentUser
             }
         )
