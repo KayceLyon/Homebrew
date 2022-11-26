@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/headEdit.ejs') %>
+    <title>Edit Background</title>
+</head>
+<body>
+    <%- include('partials/nav.ejs') %> 
+    <div class="container">
+        <h1>Edit Background</h1>
+        <form action="/backgrounds/<%=backgrounds._id%>?_method=PUT" method="POST">
+            <input type="text" name="name" value=<%=backgrounds.name%> placeholder="Name">
+            <input type="submit" value="Edit Background">
+        </form>
+    </div>
+    <%- include('partials/scriptEdit.ejs') %>
+</body>
+</html>

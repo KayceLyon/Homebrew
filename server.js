@@ -17,9 +17,17 @@ if(process.env.PORT){
 
 const userController = require('./controllers/usersController.js');
 const sessionsController = require('./controllers/sessionsController.js');
-const spellsController = require('./controllers/spellsController.js');
-const classesController = require('./controllers/classesController.js');
 const armorController = require('./controllers/armorController.js');
+const backgroundsController = require('./controllers/backgroundsController.js');
+const classesController = require('./controllers/classesController.js');
+const featsController = require('./controllers/itemsController.js');
+const itemsController = require('./controllers/armorController.js');
+const monstersController = require('./controllers/monstersController.js');
+const racesController = require('./controllers/racesController.js');
+const spellsController = require('./controllers/spellsController.js');
+const subclassesController = require('./controllers/subclassesController.js');
+const weaponsController = require('./controllers/weaponsController.js');
+
 
 
 const isAuthenticated = (req, res, next) => {
@@ -49,10 +57,16 @@ app.use(methodOverride('_method'));
 
 app.use('/users', userController);
 app.use('/sessions', sessionsController);
-app.use('/spells', spellsController);
-app.use('/classes', classesController);
 app.use('/armor', armorController);
-
+app.use('/backgrounds', backgroundsController);
+app.use('/classes', classesController);
+app.use('/feats', featsController);
+app.use('/items', itemsController);
+app.use('/monsters', monstersController);
+app.use('/races', racesController);
+app.use('/spells', spellsController);
+app.use('/subclasses', subclassesController);
+app.use('/weapons', weaponsController);
 
 app.get('/', (req, res) => {
     res.render('index.ejs')

@@ -2,25 +2,25 @@
 <html class="no-js" lang="en" dir="ltr">
   <head>
     <%- include('partials/head.ejs') %>
-    <title>Homebrew Armor</title>
+    <title>Homebrew Weapons</title>
   </head>
 <body>
     <%- include('partials/nav.ejs') %>
     <div class="grid-container">
         <div class="grid-x grid-margin-x small-up-2 medium-up-3">
-            <% for(let i = 0; i < armor.length; i++) { %>
+            <% for(let i = 0; i < weapons.length; i++) { %>
           <div class="cell">
             <div class="card">
               <div class="card-section">
               <h4>
-                <a href="/armor/<%=armor[i]._id%>"><%=armor[i].name%></a>
+                <a href="/weapons/<%=weapons[i]._id%>"><%=weapons[i].name%></a>
             </h4>
               </div>
             </div>
           </div>
           <% } %>
     </div>
-    <a href="/armor/new"><button class="add">Add Armor</button></a>
+    <a href="/weapons/new"><button class="add">Add Weapon</button></a>
     <%- include('partials/script') %>
   </body>
 </html>

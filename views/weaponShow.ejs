@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs') %>
+    <title>Weapon Information</title>
+</head>
+<body>
+    <%- include('partials/nav.ejs') %> 
+    <div class="container" >
+        <h1><%=weapons.name%></h1>
+            <p><%=weapons.school%></p>
+            <p><%=weapons.level%></p>
+            <p><%=weapons.time%></p>
+            <a href="/weapons/<%=weapons.id%>/edit">
+                <button class="edit">Edit</button>
+            </a>
+            <form action="/armor/<%=weapons.id%>?_method=DELETE" method="POST">
+                <input class="delete" type="submit" value="Delete">
+            </form>
+    </div>
+    <%- include('partials/script.ejs') %>
+</body>
+</html>

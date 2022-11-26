@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/headEdit.ejs') %>
+    <title>Edit Sub-Class</title>
+</head>
+<body>
+    <%- include('partials/nav.ejs') %> 
+    <div class="container">
+        <h1>Edit Sub-Class</h1>
+        <form action="/armor/<%=subclass._id%>?_method=PUT" method="POST">
+            <input type="text" name="name" value=<%=subclass.name%> placeholder="Name">
+            <input type="submit" value="Edit Sub-Class">
+        </form>
+    </div>
+    <%- include('partials/scriptEdit.ejs') %>
+</body>
+</html>
