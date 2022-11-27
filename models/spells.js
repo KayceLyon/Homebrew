@@ -4,8 +4,8 @@ const Schema = mongoose.Schema;
 const spellSchema = new Schema ({
     name: {type: String, required: true},
     level: {type: Number, required: true},
-    // school: {type: String, required: true} ,
-    // ritual: {type: String},
+    school: {type: String, required: true},
+    ritual: {type: String, required: true},
     // castingTime: {type: Number},
     // range: {type: Number},
     // components: {type: String},
