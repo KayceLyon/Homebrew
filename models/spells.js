@@ -15,7 +15,7 @@ const spellSchema = new Schema ({
     description: {type: String, required: true},
     classes: [{type: String, required: true}] ,
     roll: [{type: Number, type: String, type: Number, required: true}],
-    // saveType: {type: String},
+    save: {type: String},
     // attackType: {type: String},
     // damageType: {type: String},
     // conditions: {type: String},
