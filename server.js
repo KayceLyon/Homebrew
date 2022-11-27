@@ -57,7 +57,7 @@ app.use(methodOverride('_method'));
 
 app.use('/users', userController);
 app.use('/sessions', sessionsController);
-app.use('/armor', armorController);
+app.use('/armor', isAuthenticated, armorController);
 app.use('/backgrounds', backgroundsController);
 app.use('/classes', classesController);
 app.use('/feats', featsController);
