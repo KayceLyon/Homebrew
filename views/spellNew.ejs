@@ -47,7 +47,7 @@
                     <input type="radio" name="ritual" value="YES" id="pokemonRed"><label for="pokemonRed">Yes</label>
                     <input type="radio" name="ritual" value="NO" id="pokemonBlue" required><label for="pokemonBlue">No</label>
                 </fieldset>
-            <div class="cell small-1">
+            <div class="cell small-2">
                 <label>Casting Time
                 <input type="number" placeholder="Use me, or don't" aria-describedby="exampleHelpTextNothing" required pattern="number">
                 </label>
@@ -72,6 +72,11 @@
                 <input id="checkbox2" type="checkbox" name="components" required><label for="checkbox2">S</label>
                 <input id="checkbox3" type="checkbox" name="components"><label for="checkbox3">M</label>
             </fieldset>
+            <div class="cell small-12">
+                <label>
+                <input type="text" name ="materials" placeholder="Materials" aria-describedby="exampleHelpTextNumber" data-abide-ignore>
+                </label>
+            </div>
             <div class="cell small-12">
                 <label>Password Required
                 <input type="password" id="password" placeholder="yeti4preZ" aria-describedby="exampleHelpTextPassword" required >
