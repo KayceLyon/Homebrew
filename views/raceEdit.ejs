@@ -8,7 +8,7 @@
     <%- include('partials/nav.ejs') %> 
     <div class="container">
         <h1>Edit Race</h1>
-        <form action="/armor/<%=race._id%>?_method=PUT" method="POST">
+        <form action="/races/<%=race._id%>?_method=PUT" method="POST">
             <input type="text" name="name" value=<%=race.name%> placeholder="Name">
             <input type="submit" value="Edit Race">
         </form>
