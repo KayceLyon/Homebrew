@@ -12,7 +12,7 @@ const spellSchema = new Schema ({
     components: {type: String, required: true},
     materials: {type: String},
     duration: [{type: String, required: true}, {type: Number}, {type: String}],
-    // description: {type: String, required: true},
+    description: {type: String, required: true},
     // classes: {type: String, required: true} ,
     // diceRolls: {type: Number},
     // diceSides: {type: Number},
