@@ -208,6 +208,22 @@
                     <option name="classes" value="Wizard (War Magic)">Wizard (War Magic)</option>
                 </select>
             </div>  
+            <div class="cell small-1">
+                <legend>Dice Count:</legend>
+                <input type="number" name="roll" placeholder="Dice Count" min="1" max="20" aria-describedby="exampleHelpTextNumber" required pattern="number">
+                <span class="form-error"> Number of dice required.</span>
+            </div>
+            <div class="cell medium-4">
+                <legend>Die Type:</legend>
+                <select id="select" required>
+                    <option name="roll" value="d4">d4</option>
+                    <option name="roll" value="d6">d6</option>
+                    <option name="roll" value="d8">d8</option>
+                    <option name="roll" value="d10">d10</option>
+                    <option name="roll" value="d12">d12</option>
+                    <option name="roll" value="d20">d20</option>
+                </select>
+            </div>
             <div class="cell small-12">
                 <label>Password Required
                 <input type="password" id="password" placeholder="yeti4preZ" aria-describedby="exampleHelpTextPassword" required >
