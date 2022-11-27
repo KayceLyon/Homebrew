@@ -7,14 +7,14 @@
 <body>
     <%- include('partials/nav.ejs') %> 
     <div class="container" >
-        <h1><%=subclasse.name%></h1>
-            <p><%=subclasse.school%></p>
-            <p><%=subclasse.level%></p>
-            <p><%=subclasse.time%></p>
-            <a href="/subclasses/<%=subclasse.id%>/edit">
+        <h1><%=subclass.name%></h1>
+            <p><%=subclass.school%></p>
+            <p><%=subclass.level%></p>
+            <p><%=subclass.time%></p>
+            <a href="/subclasses/<%=subclass.id%>/edit">
                 <button class="edit">Edit</button>
             </a>
-            <form action="/armor/<%=subclasse.id%>?_method=DELETE" method="POST">
+            <form action="/armor/<%=subclass.id%>?_method=DELETE" method="POST">
                 <input class="delete" type="submit" value="Delete">
             </form>
     </div>
