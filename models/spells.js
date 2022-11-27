@@ -17,9 +17,9 @@ const spellSchema = new Schema ({
     roll: [{type: Number, type: String, type: Number, required: true}],
     scale: [{type: Boolean}, {type: String}],
     save: [{type: String}, {type: String}, {type: String}],
-    attack: {type: String},
-    damage: {type: String},
-    conditions: {type: String},
+    // attack: [{type: Boolean}, {type: String}],
+//     damage: {type: String},
+//     conditions: {type: String},
 })
 
 const Spell = mongoose.model('Spell', spellSchema);
