@@ -67,12 +67,11 @@
                 <input id="checkbox3" type="checkbox" name="components"><label for="checkbox3">M</label>
             </fieldset>
             <div class="cell small-12">
-                <label>
+                <legend>Materials:</legend>
                 <input type="text" name ="materials" placeholder="Materials" aria-describedby="exampleHelpTextNumber" data-abide-ignore>
-                </label>
             </div>
             <div class="cell medium-4">
-                <label>Duration Type</label>
+                <label>Duration Type:</label>
                 <select id="select" required>
                     <option value=""></option>
                     <option name="duration" value="Concentration">Concentration</option>
@@ -85,14 +84,14 @@
                 </label>
             </div>
             <div class="cell small-4">
-                <label>Duration</label>
+                <label>Duration:</label>
                 <input type="number" name="duration" placeholder="Duration"  aria-describedby="exampleHelpTextNumber" required pattern="number">
                 <span class="form-error"> Number required.</span>
                 </label>
                 <p class="help-text" id="exampleHelpTextNumber">Here's how you use this input field!</p>
             </div>
             <div class="cell medium-4">
-                <label>Length</label>
+                <label>Length:</label>
                 <select id="select" required>
                     <option value=""></option>
                     <option name="duration" value="round">Round</option>
@@ -104,12 +103,12 @@
             </div>
             <div class="cell medium-12">
             <label>
-                Spell Description
+                Spell Description:
                 <textarea name="description" required pattern="text" placeholder="Description"></textarea>
               </label>
             </div>
             <div class="cell medium-4">
-                <label>Available for Class(es)</label>
+                <label>Available for Class(es):</label>
                 <select multiple id="select" required>
                     <option name="classes" value="Artificer">Artificer</option>
                     <option name="classes" value="Artificer (Alchemist)">Artificer (Alchemist)</option>
