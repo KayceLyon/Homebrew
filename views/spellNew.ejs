@@ -50,20 +50,25 @@
             <div class="cell small-1">
                 <input type="number" placeholder="Use me, or don't" aria-describedby="exampleHelpTextNothing" required pattern="number">
                 </label>
-                <p class="help-text" id="exampleHelpTextNothing">This input is ignored by Abide using `data-abide-ignore`</p>
             </div>
             <div class="cell medium-6">
                 <select id="select" required>
                     <option value=""></option>
-                    <option name="time" value="action">Action</option>
-                    <option name="time" value="bonus action">Bonus Action</option>
+                    <option name="time" value="action">Action(s)</option>
+                    <option name="time" value="bonus action">Bonus Action(s)</option>
                     <option name="time" value="hour">Hour(s)</option>
                     <option name="time" value="minute">Minute(s)</option>
                     <option name="time" value="no action">No Action</option>
                     <option name="time" value="reaction">Reaction</option>
+                    <option name="time" value="special">Special</option>
                 </select>
                 </label>
             </div>
+            <fieldset class="cell medium-6">
+                <input id="checkbox1" type="checkbox" name="components"><label for="checkbox1">V</label>
+                <input id="checkbox2" type="checkbox" name="components" required><label for="checkbox2">S</label>
+                <input id="checkbox3" type="checkbox" name="components"><label for="checkbox3">M</label>
+            </fieldset>
             <div class="cell small-12">
                 <label>Password Required
                 <input type="password" id="password" placeholder="yeti4preZ" aria-describedby="exampleHelpTextPassword" required >
