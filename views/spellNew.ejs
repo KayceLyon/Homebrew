@@ -68,7 +68,7 @@
             </fieldset>
             <div class="cell small-12">
                 <legend>Materials:</legend>
-                <input type="text" name ="materials" placeholder="Materials" aria-describedby="exampleHelpTextNumber" data-abide-ignore>
+                <textarea name="materials" required pattern="text" placeholder="Materials"></textarea>
             </div>
             <div class="cell medium-4">
                 <legend>Duration Type:</legend>
@@ -88,7 +88,6 @@
                 <input type="number" name="duration" placeholder="Duration"  aria-describedby="exampleHelpTextNumber" required pattern="number">
                 <span class="form-error"> Number required.</span>
                 </label>
-                <p class="help-text" id="exampleHelpTextNumber">Here's how you use this input field!</p>
             </div>
             <div class="cell medium-4">
                 <legend>Length:</legend>
