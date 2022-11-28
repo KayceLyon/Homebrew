@@ -58,15 +58,15 @@ app.use(methodOverride('_method'));
 app.use('/users', userController);
 app.use('/sessions', sessionsController);
 app.use('/armor', isAuthenticated, armorController);
-app.use('/backgrounds', backgroundsController);
-app.use('/classes', classesController);
-app.use('/feats', featsController);
-app.use('/items', itemsController);
-app.use('/monsters', monstersController);
-app.use('/races', racesController);
-app.use('/spells', spellsController);
-app.use('/subclasses', subclassesController);
-app.use('/weapons', weaponsController);
+app.use('/backgrounds', isAuthenticated, backgroundsController);
+app.use('/classes', isAuthenticated, classesController);
+app.use('/feats', isAuthenticated, featsController);
+app.use('/items', isAuthenticated, itemsController);
+app.use('/monsters', isAuthenticated, monstersController);
+app.use('/races', isAuthenticated, racesController);
+app.use('/spells', isAuthenticated, spellsController);
+app.use('/subclasses', isAuthenticated, subclassesController);
+app.use('/weapons', isAuthenticated, weaponsController);
 
 app.get('/', (req, res) => {
     res.render('index.ejs')
