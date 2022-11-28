@@ -157,7 +157,7 @@
   }
   
   .logout {
-    background-color: none;
+    background-color: rgba(254, 254, 254, 0.0);
     border: none;
     color: #fefefe;
   }
