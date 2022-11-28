@@ -167,3 +167,7 @@
   .login {
     text-align: center;
   }
+
+  .login-input {
+    justify-content: center;
+  }
