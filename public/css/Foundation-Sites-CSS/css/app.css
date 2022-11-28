@@ -163,3 +163,7 @@
     font: inherit;
     outline: inherit;
   }
+
+  .login {
+    text-align: center;
+  }
