@@ -58,7 +58,7 @@
               <li class="hide-for-small-only"><a href="#">Welcome, <%= currentUser.username %>!</a></li>
               <li>
                 <form action="/sessions?_method=DELETE" method="POST">
-                  <input type="submit" value="Log Out"/>
+                  <a href="#"><input type="submit"/></a>
                 </form>
               </li>
               <% } else { %>
