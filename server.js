@@ -28,8 +28,6 @@ const spellsController = require('./controllers/spellsController.js');
 const subclassesController = require('./controllers/subclassesController.js');
 const weaponsController = require('./controllers/weaponsController.js');
 
-
-
 const isAuthenticated = (req, res, next) => {
     if (req.session.currentUser) {
       return next()
@@ -69,8 +67,13 @@ app.use('/subclasses', isAuthenticated, subclassesController);
 app.use('/weapons', isAuthenticated, weaponsController);
 
 app.get('/', (req, res) => {
-    res.render('index.ejs')
-})
+      res.render(
+          'index.ejs', 
+          {
+              currentUser: req.session.currentUser
+          }
+      )
+  });
 
 //==============LISTENERS=============
 
