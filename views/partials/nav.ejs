@@ -55,10 +55,10 @@
         <div class="nav-bar-right">
           <ul class="menu">
             <% if (currentUser) { %>
-              <li class="hide-for-small-only"><a href="#">Welcome, <%= currentUser.username %></a></li>
+              <li class="hide-for-small-only"><a href="#">Welcome, <%= currentUser.username %>!</a></li>
               <li>
                 <form action="/sessions?_method=DELETE" method="POST">
-                  <input type="submit" value="Log Out" class="btn-small red" />
+                  <input type="submit" value="Log Out"/>
                 </form>
               </li>
               <% } else { %>
