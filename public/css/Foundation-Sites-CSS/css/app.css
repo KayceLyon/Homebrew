@@ -157,7 +157,10 @@
   }
   
   .logout {
-    background-color: rgba(254, 254, 254, 0.0);
+    background: none;
+    color: inherit;
     border: none;
-    color: #fefefe;
+    padding: 0;
+    font: inherit;
+    outline: inherit;
   }
