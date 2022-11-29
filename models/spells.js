@@ -5,7 +5,7 @@ const spellSchema = new Schema ({
     name: {type: String, required: true},
     level: {type: Number, required: true},
     school: {type: String, required: true},
-    // ritual: {type: String, required: true},
+    ritual: {type: String, required: true},
     // time: [{type: Number, required: true}, {type: String, required: true}],
     // range: [{type: String, required: true}, {type: Number, required: true}],
     // aoe:[{type: String}, {type: Number}],
