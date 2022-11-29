@@ -166,9 +166,10 @@
 
   .login {
     text-align: center;
+    margin-top: 75px;
+    margin-bottom: 20px;
   }
 
-  .login-input {
-    display: flex;
-    justify-content: center;
-  }
+ .login-buttons {
+  margin-top: 10px;
+ }
