@@ -2,27 +2,26 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const spellSchema = new Schema ({
-    name: {type: String, required: true},
-    level: {type: Number, required: true},
-    school: {type: String, required: true},
-    ritual: {type: String, required: true},
+    name: {type: String},
+    level: {type: Number},
+    school: {type: String},
+    ritual: {type: String},
     time: [{
         time: {
-            type: Number, 
-            required: true
+            type: Number 
         }, 
         castingType: {
-            type: String, 
-            required: true}
+            type: String
+            }
         }],
-    // range: [{type: String, required: true}, {type: Number, required: true}],
+    // range: [{type: String, }, {type: Number, }],
     // aoe:[{type: String}, {type: Number}],
-    // components: {type: String, required: true},
+    // components: {type: String, },
     // materials: {type: String},
-    // duration: [{type: String, required: true}, {type: Number}, {type: String}],
-    // description: {type: String, required: true},
-    // classes: [{type: String, required: true}] ,
-    // roll: [{type: Number, type: String, type: Number, required: true}],
+    // duration: [{type: String, }, {type: Number}, {type: String}],
+    // description: {type: String, },
+    // classes: [{type: String, }] ,
+    // roll: [{type: Number, type: String, type: Number, }],
     // scale: [{type: Boolean}, {type: String}],
     // save: [{type: String}, {type: String}, {type: String}],
     // attack: [{type: Boolean}, {type: String}], 
