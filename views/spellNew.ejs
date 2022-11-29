@@ -9,7 +9,7 @@
     <div class="container">
         <h1>Create New Spell</h1>
         <form action="/spells" method="POST" data-abide novalidate>
-            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="name" placeholder="Spell Name" required pattern="text">
             <input type="submit" value="Add Spell">
         </form>
     </div>
