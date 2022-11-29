@@ -10,9 +10,9 @@ const spellSchema = new Schema ({
         castingTime: {
             type: Number 
         }, 
-        // castingType: {
-        //     type: String
-        //     }
+        castingType: {
+            type: String
+            }
         }],
     // range: [{type: String, }, {type: Number, }],
     // aoe:[{type: String}, {type: Number}],
