@@ -8,7 +8,7 @@
     <%- include('partials/nav.ejs') %>
     <div class="grid-container">
         <h1>Create New Spell</h1><hr>
-        <form action="/spells/new" method="POST" data-abide novalidate>
+        <form action="/spells" method="POST" data-abide novalidate>
             <div class="grid-x grid-margin-x">
             <div class="cell">
                 <div data-abide-error class="alert callout" style="display: none;">
@@ -262,14 +262,14 @@
                 <textarea name="save" required placeholder="Effect on Save Fail"></textarea>
             </div>
             </div> -->
-            <div class="grid-x grid-margin-x">
-            <fieldset class="cell medium-6">
-                <button class="button" value="Add Spell">Add Spell</button>
-            </fieldset>
-            <fieldset class="cell medium-6">
-                <button class="button" type="reset" value="Reset">Reset</button>
-            </fieldset>
-            </div>
+            <div class="grid-container">
+                <div class="grid-x align-center">
+                <fieldset class="cell small-1">
+                    <button class="button login-buttons" type="submit" value="Submit">Add Spell</button>
+                </fieldset>
+                <fieldset class="cell medium-6">
+                    <button class="button" type="reset" value="Reset">Reset</button>
+                  </fieldset>
         </form>
       </div>
     <!-- <div class="container">
