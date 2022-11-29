@@ -7,7 +7,7 @@ const spellSchema = new Schema ({
     school: {type: String},
     ritual: {type: String},
     castingTime: {type: Number},
-    castingType: {type: String},
+    castingType: {},
     // range: [{type: String, }, {type: Number, }],
     // aoe:[{type: String}, {type: Number}],
     // components: {type: String, },
