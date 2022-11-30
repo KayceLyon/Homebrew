@@ -22,7 +22,7 @@
                     </div>
                     <div class="grid-x grid-margin-x">
                         <div class="cell small-3 medium-3 large-3">
-                            <p>Level: <%=spell.level%></p>
+                            <p><strong>Level:</strong> 
                         </div>
                         <div class="cell small-3 medium-3 large-3">
                             <p>School of Magic: <%=spell.school%></p>
@@ -33,6 +33,10 @@
                         <div class="cell small-3 medium-3 large-3">
                             <p>Ritual: <%=spell.ritual%></p>
                         </div>
+                        <div class="cell small-3 medium-3 large-3">
+                            <p><%=spell.level%></p>
+                        </div>
+
             </div>
           </div>
         <%- include('partials/script.ejs') %>
