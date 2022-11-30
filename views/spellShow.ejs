@@ -14,6 +14,7 @@
                         <button class="button">Edit</button>
                     </a>
                 </div>
+                <hr>
             <div class="cell small-1 medium-1 large-1">
                 <form action="/spells/<%=spell.id%>?_method=DELETE" method="POST">
                     <button class="button" type="submit" value="Delete">Delete</button>
@@ -99,7 +100,7 @@
             </div>
             <div class="grid-container">
                 <hr><h3>Description:</h3><hr>
-                <div class="grid-x align-right">
+                <div class="grid-x grid-margin-x">
                     <div class="cell small-3 medium-3 large-3">
                         <p><%=spell.description%></p> 
                     </div>
