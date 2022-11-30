@@ -13,26 +13,25 @@
             <div class="card">
               <div class="card-section">
               <h3>
-                <h1><%=spell.name%></h1><hr>
-                <a href="/spells/<%=spell.id%>/edit">
-                    <button class="button">Edit</button>
-                </a>
-                <form action="/spells/<%=spell.id%>?_method=DELETE" method="POST">
-                    <button class="button" type="submit" value="Delete">Delete</button>
-                </form>
-                <p><%=spell.school%></p>
-                <p><%=spell.level%></p>
-                <p><%=spell.time%></p>
-                <p><%=spell.castingType%></p>
+            </div><div class="grid-x grid-margin-x">
+                <div class="cell small-6 medium-6 large-2">
+                    <h1><%=spell.name%></h1><hr>
+                    <a href="/spells/<%=spell.id%>/edit">
+                        <button class="button">Edit</button>
+                    </a>
+                    <form action="/spells/<%=spell.id%>?_method=DELETE" method="POST">
+                        <button class="button" type="submit" value="Delete">Delete</button>
+                    </form>
+                    <p><%=spell.school%></p>
+                    <p><%=spell.level%></p>
+                    <p><%=spell.time%></p>
+                    <p><%=spell.castingType%></p>
             </h3>
               </div>
             </div>
           </div>
         </div>
-                   
-                    
-                
-            </div>
+    </div>
          </div>
         <%- include('partials/script.ejs') %>
     </body>
