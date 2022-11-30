@@ -30,7 +30,7 @@ compendiumSpells.get('/', (req, res) => {
         res.render(
             'compendiumSpellIndex.ejs', 
             {
-                spell: foundSpells,
+                compendiumSpell: foundSpells,
                 currentUser: req.session.currentUser
             }
         )
@@ -43,7 +43,7 @@ compendiumSpells.get('/:id', (req, res) => {
         res.render(
             'compendiumSpellShow.ejs',
             {
-                spell: spellId,
+                compendiumSpell: spellId,
                 currentUser: req.session.currentUser
             }
         )
@@ -56,7 +56,7 @@ compendiumSpells.get('/:id/edit', (req, res) => {
         res.render(
             'compendiumSpellEdit.ejs',
             {
-                spell: spellId,
+                compendiumSpell: spellId,
                 currentUser: req.session.currentUser
             }
         )
@@ -72,7 +72,7 @@ compendiumSpells.put('/:id', (req, res) => {
 
 // Destroy: Delete
 compendiumSpells.delete('/:id', (req, res) => {
-    compendiumSpell.findByIdAndRemove(req.params.id, (err, spell) => {
+    compendiumSpell.findByIdAndRemove(req.params.id, (err, compendiumSpell) => {
         res.redirect('/compendiumSpells')
     })
 });
