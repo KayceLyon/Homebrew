@@ -18,7 +18,7 @@
             </div><div class="grid-x grid-margin-x">
                 <div class="cell small-6 medium-6 large-2">
                     <legend>Spell Name:</legend>
-                    <input type="text" name="name" placeholder="name" value=<%spell.name%> required pattern="text">
+                    <input type="text" name="name" placeholder="name" value=<%=spell.name%> required pattern="text">
                     <span class="form-error"> Spell name required.</span>
                 </div>
                 <div class="cell small-6 medium-6 large-1">
@@ -106,7 +106,7 @@
                 </fieldset>
                 <div class="cell small-12 medium-12 large-12">
                     <legend>Materials:</legend>
-                    <textarea name="materials" placeholder="Materials" value=<%=spell.materials%>></textarea>
+                    <textarea name="materials" value=<%=spell.materials%> placeholder="Materials"></textarea>
                 </div>
                 <div class="cell small-4 medium-4 large-4">
                     <legend>Duration Type:</legend>
