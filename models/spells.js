@@ -31,5 +31,4 @@ const spellSchema = new Schema ({
 })
 
 const Spell = mongoose.model('Spell', spellSchema);
-exports.submit
 module.exports = Spell;
