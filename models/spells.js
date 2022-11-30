@@ -14,8 +14,8 @@ const spellSchema = new Schema ({
     materials: {type: String},
     durationType: {type: String, }, 
     duration: {type: Number}, 
-    length: {type: String}
-    // description: {type: String, },
+    length: {type: String},
+    description: {type: String},
     // classes: [{type: String, }] ,
     // roll: [{type: Number, type: String, type: Number, }],
     // scale: [{type: Boolean}, {type: String}],
