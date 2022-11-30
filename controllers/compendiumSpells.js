@@ -20,7 +20,7 @@ compendiumSpells.post('/', (req, res) => {
             } else {
             console.log(data)
            }
-        res.redirect('/compendiumspells');
+        res.redirect('/compendiumSpells');
     });
 });
 
@@ -66,14 +66,14 @@ compendiumSpells.get('/:id/edit', (req, res) => {
 // Update: Put
 compendiumSpells.put('/:id', (req, res) => {
     compendiumSpell.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updateModel) => {
-        res.redirect('/compendiumspells');
+        res.redirect('/compendiumSpells');
     });
 });
 
 // Destroy: Delete
 compendiumSpells.delete('/:id', (req, res) => {
     compendiumSpell.findByIdAndRemove(req.params.id, (err, spell) => {
-        res.redirect('/compendiumspells')
+        res.redirect('/compendiumSpells')
     })
 });
 
