@@ -1,0 +1,30 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <%- include('partials/head.ejs') %>
+    <title>Spells</title>
+  </head>
+<body>
+    <%- include('partials/nav.ejs') %>
+    <div class="grid-container">
+        <div class="grid-x align-center small-up-2 medium-up-3">
+          <h1 class="h1Text">Spells</h1>
+        </div>
+        <div class="grid-x grid-margin-x small-up-2 medium-up-3">
+            <% for(let i = 0; i < compendiumSpell.length; i++) { %>
+          <div class="cell">
+            <div class="card">
+              <div class="card-section">
+              <h3>
+                <a href="/spells/<%=compendiumSpell[i]._id%>"><%=compendiumSpell[i].name%></a>
+            </h3>
+              <p>Level: <%=compendiumSpell[i].level%></p>
+              <p>Description: <%=compendiumSpell[i].description%></p>
+              </div>
+            </div>
+          </div>
+          <% } %>
+    </div>
+    <%- include('partials/script') %>
+  </body>
+</html>
