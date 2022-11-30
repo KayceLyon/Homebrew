@@ -16,17 +16,19 @@
                     <h1><%=spell.name%></h1><hr>
                 </div>
                 <div class="grid-x align-right">
-                    <div class="cell small-2 medium-2 large-2">
+                    <div class="cell small-1 medium-1 large-1">
                     <a href="/spells/<%=spell.id%>/edit">
                         <button class="button">Edit</button>
                     </a>
                 </div>
-                <div class="cell small-2 medium-2 large-2">
+                <div class="cell small-1 medium-1 large-1">
                     <form action="/spells/<%=spell.id%>?_method=DELETE" method="POST">
                         <button class="button" type="submit" value="Delete">Delete</button>
                     </form>
                     </div>
                     </div>
+                    <div class="grid-x grid-margin-x">
+                        <div class="cell small-1 medium-1 large-1">
                     <p><%=spell.school%></p>
                     <p><%=spell.level%></p>
                     <p><%=spell.time%></p>
