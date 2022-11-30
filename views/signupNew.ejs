@@ -10,20 +10,20 @@
     <div data-abide-error class="alert callout" style="display: none;">
         <p><i class="fi-alert"></i> There are some errors in your form.</p>
     </div>
-    <<div class="grid-x align-center">
+    <div class="grid-x align-center">
         <div  class="cell small-6 medium-5 large-5">
         <div class="cell small-12">
             <label>Username
-            <input type="text" name="username" placeholder="Username" aria-describedby="example1Hint1" aria-errormessage="example1Error1" required pattern="text">
+            <input type="text" name="username" placeholder="Username" aria-describedby="hint1" required pattern="text">
             <span class="form-error">
                 Username required.
             </span>
             </label>
-        <p class="help-text" id="example1Hint1">Usernames must be alphanumeric with no special characters.</p>
+        <p class="help-text" id="hint1">Usernames must be alphanumeric with no special characters.</p>
         </div>
         <div class="cell small-12">
             <label>Email
-            <input type="email" name="email" placeholder="Username" aria-describedby="example1Hint1" aria-errormessage="example1Error1" required pattern="email">
+            <input type="email" name="email" placeholder="Username" required pattern="email">
             <span class="form-error">
                 Invalid Email
             </span>
@@ -31,16 +31,16 @@
         </div>
         <div class="cell small-12">
             <label>Password
-            <input type="password" name="password" id="password" placeholder="Password" aria-describedby="example1Hint2" aria-errormessage="example1Error2" required >
+            <input type="password" name="password" id="password" placeholder="Password" aria-describedby="hint2" required >
             <span class="form-error">
                 Not a valid password.
             </span>
             </label>
-            <p class="help-text" id="example1Hint2">Passwords must be at least 8 characters long.</p>
+            <p class="help-text" id="hint2">Passwords must be at least 8 characters long.</p>
         </div>
         <div class="cell small-12">
             <label>Confirm Password
-            <input type="password" placeholder="Confirm Password" aria-describedby="example1Hint3" aria-errormessage="example1Error3" required pattern="alpha_numeric" data-equalto="password">
+            <input type="password" placeholder="Confirm Password" required pattern="alpha_numeric" data-equalto="password">
             <span class="form-error">
                 Incorrect password.
             </span>
