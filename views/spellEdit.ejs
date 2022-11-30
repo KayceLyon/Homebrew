@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('partials/head.ejs') %>
-    <title>New Spell</title>
+    <%- include('partials/headEdit.ejs') %>
+    <title>Edit Spell</title>
 </head>
 <body>
     <%- include('partials/nav.ejs') %>
     <div class="grid-container">
-        <h1>Create New Spell</h1><hr>
+        <h1>Edit Spell</h1><hr>
         <form action="/spells/<%=spell._id%>?_method=PUT" method="POST">
             <div class="grid-x grid-margin-x">
               <div class="cell">
@@ -312,24 +312,6 @@
                 </div>
             </form>
           </div>
-          <%- include('partials/script.ejs')%>
+          <%- include('partials/scriptEdit.ejs')%>
         </body>
         </html>
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <%- include('partials/headEdit.ejs') %>
-    <title>Edit Spell</title>
-</head>
-<body>
-    <%- include('partials/nav.ejs') %> 
-    <div class="container">
-        <h1>Edit Spell</h1>
-            <input type="text" name="name" value=<%=spell.name%> placeholder="Name">
-            <input type="submit" value="Edit Spell">
-        </form>
-    </div>
-    <%- include('partials/scriptEdit.ejs') %>
-</body>
-</html> -->
