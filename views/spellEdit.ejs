@@ -23,7 +23,7 @@
                 </div>
                 <div class="cell small-6 medium-6 large-1">
                     <legend><span data-tooltip class="top" data-click-open="false" tabindex="2" title="I don't stay open">Level:</span></legend>
-                    <input type="number" name="level" placeholder="level" value=<%=spell.level%> min="1" max="20" required pattern="number">
+                    <input type="number" name="level" placeholder="level"  min="1" max="20" required pattern="number">
                     <span class="form-error"> Level required.</span>
                 </div>
                     <fieldset class="cell small-12 medium-12 large-9">
@@ -45,7 +45,7 @@
                     </fieldset>
                 <div class="cell small-6 medium-3 large-4">
                     <legend>Casting Time:</legend>
-                    <input type="number" name="castingTime" placeholder="Casting Time" value=<%=spell.castingTime%> required pattern="number">
+                    <input type="number" name="castingTime" placeholder="Casting Time"  required pattern="number">
                     <span class="form-error"> Casting time required.</span>
                 </div>
                 <div class="cell small-6 medium-4 large-4">
@@ -76,7 +76,7 @@
                 </div>
                 <div class="cell small-6 medium-6 large-1">
                     <legend><span data-tooltip class="top" data-click-open="false" tabindex="2" title="I don't stay open">Range:</span></legend>
-                    <input type="number" name="range" placeholder="FT." value=<%=spell.range%> min="1" required pattern="number">
+                    <input type="number" name="range" placeholder="FT."  min="1" required pattern="number">
                     <span class="form-error"> Range required.</span>
                 </div>
                 <div class="cell small-6 medium-4 large-4">
@@ -94,7 +94,7 @@
                 </div>
                 <div class="cell small-6 medium-6 large-1">
                     <legend><span data-tooltip class="top" data-click-open="false" tabindex="2" title="I don't stay open">AOE:</span></legend>
-                    <input type="number" name="aoeSize" placeholder="FT." value=<%=spell.aoeSize%> min="1" required pattern="number">
+                    <input type="number" name="aoeSize" placeholder="FT."  min="1" required pattern="number">
                     <span class="form-error"> Area of Effect required.</span>
                 </div>
                 <fieldset class="cell small-6 medium-3 large-2">
@@ -122,7 +122,7 @@
                 </div>
                 <div class="cell small-4 medium-4 large-4">
                     <legend>Duration:</legend>
-                    <input type="number" name="duration" value=<%=spell.duration%> placeholder="Duration" required pattern="number">
+                    <input type="number" name="duration"  placeholder="Duration" required pattern="number">
                     <span class="form-error"> Number required.</span>
                 </div>
                 <div class="cell small-4 medium-4 large-4">
@@ -137,7 +137,7 @@
                 </div>
                 <div class="cell small-12 medium-12 large-12">
                 <legend>Spell Description:</legend>
-                    <textarea name="description" value=<%=spell.description%> required placeholder="Description"></textarea>
+                    <textarea name="description"  required placeholder="Description"></textarea>
                 </div>
                 <div class="cell small-12 medium-4 large-4">
                     <legend>Available for Class(es):</legend>
@@ -247,7 +247,7 @@
                 </div>  
                 <div class="cell small-4 medium-4 large-4">
                     <legend>Dice Count:</legend>
-                    <input type="number" name="diceCount" value=<%=spell.diceCount%> placeholder="Dice Count" min="1" max="20" aria-describedby="exampleHelpTextNumber" required pattern="number">
+                    <input type="number" name="diceCount"  placeholder="Dice Count" min="1" max="20" aria-describedby="exampleHelpTextNumber" required pattern="number">
                     <span class="form-error"> Number of dice required.</span>
                 </div>
                 <div class="cell small-4 medium-4 large-4">
@@ -290,15 +290,15 @@
                 </div>
                 <div class="cell small-12 medium-12 large-12">
                     <legend>Effect on Missed Save:</legend>
-                    <textarea name="missedSave" required value=<%=spell.missedSave%> placeholder="Effect on Missed Save"></textarea>
+                    <textarea name="missedSave" required  placeholder="Effect on Missed Save"></textarea>
                 </div>
                 <div class="cell small-12 medium-12 large-12">
                     <legend>Effect on Save Success:</legend>
-                    <textarea name="successSave" required value=<%=spell.successSave%> placeholder="Effect on Save Success"></textarea>
+                    <textarea name="successSave" required  placeholder="Effect on Save Success"></textarea>
                 </div>
                 <div class="cell small-12 medium-12 large-12">
                     <legend>Effect on Save Fail:</legend>
-                    <textarea name="failSave" required value=<%=spell.failSave%> placeholder="Effect on Save Fail"></textarea>
+                    <textarea name="failSave" required  placeholder="Effect on Save Fail"></textarea>
                 </div>
                 <div class="grid-container">
                     <div class="grid-x grid-margin-x">
