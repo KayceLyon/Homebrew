@@ -17,10 +17,9 @@
               </div>
             </div><div class="grid-x grid-margin-x">
                 <div class="cell small-6 medium-6 large-2">
-                    <label>Spell Name:
+                    <legend>Spell Name:</legend>
                     <input type="text" name="name" placeholder="Spell Name" required pattern="text">
                     <span class="form-error"> Spell name required.</span>
-                    </label>
                 </div>
                 <div class="cell small-6 medium-6 large-1">
                     <legend><span data-tooltip class="top" data-click-open="false" tabindex="2" title="I don't stay open">Level:</span></legend>
@@ -75,7 +74,24 @@
                 </div>
                 <div class="cell small-6 medium-6 large-1">
                     <legend><span data-tooltip class="top" data-click-open="false" tabindex="2" title="I don't stay open">Range(ft.):</span></legend>
-                    <input type="number" name="range" placeholder="Range (ft.)" min="1" required pattern="number">
+                    <input type="number" name="range" placeholder="Range (FT.)" min="1" required pattern="number">
+                    <span class="form-error"> Range required.</span>
+                </div>
+                <div class="cell small-6 medium-4 large-4">
+                    <legend>Area of Effect: (Type)</legend>
+                    <select id="timeSelect" name="aeoType" required>
+                        <option value="Cone">Cone</option>
+                        <option value="Cube">Cube</option>
+                        <option value="Cylinder">Cylinder</option>
+                        <option value="Line">Line</option>
+                        <option value="Sphere">Sphere</option>
+                        <option value="Square">Square</option>
+                    </select>
+                    <span class="form-error"> Range type required.</span>
+                </div>
+                <div class="cell small-6 medium-6 large-1">
+                    <legend><span data-tooltip class="top" data-click-open="false" tabindex="2" title="I don't stay open">Area of Effect(FT.):</span></legend>
+                    <input type="number" name="aeoSize" placeholder="AOE (FT.)" min="1" required pattern="number">
                     <span class="form-error"> Range required.</span>
                 </div>
                 <fieldset class="cell small-6 medium-3 large-2">
