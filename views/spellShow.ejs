@@ -7,7 +7,7 @@
 <body>
     <%- include('partials/nav.ejs') %>
     <div class="grid-container">
-        <h1>Create New Spell</h1><hr>
+        <h1><%=spell.name%></h1><hr>
         <form action="/spells" method="POST" data-abide novalidate>
             <div class="grid-x grid-margin-x">
               <div class="cell">
@@ -15,26 +15,21 @@
                   <p><i class="fi-alert"></i> There are some errors in your form.</p>
                 </div>
               </div>
-            </div><div class="grid-x grid-margin-x">
+            </div>
+            <div class="grid-x grid-margin-x">
                 <div class="cell small-6 medium-6 large-2">
-                    <label>Spell Name:
-                    <input type="text" name="name" placeholder="Spell Name" required pattern="text">
-                    <span class="form-error"> Spell name required.</span>
-                    </label>
-                </div>
-    <div class="container" >
-        <h1><%=spell.name%></h1>
-            <p><%=spell.school%></p>
-            <p><%=spell.level%></p>
-            <p><%=spell.time%></p>
-            <p><%=spell.castingType%></p>
-            <a href="/spells/<%=spell.id%>/edit">
-                <button class="edit">Edit</button>
-            </a>
-            <form action="/spells/<%=spell.id%>?_method=DELETE" method="POST">
-                <input class="delete" type="submit" value="Delete">
-            </form>
-    </div>
-    <%- include('partials/script.ejs') %>
-</body>
+                    <p><%=spell.school%></p>
+                <p><%=spell.level%></p>
+                <p><%=spell.time%></p>
+                <p><%=spell.castingType%></p>
+                <a href="/spells/<%=spell.id%>/edit">
+                    <button class="edit">Edit</button>
+                </a>
+                <form action="/spells/<%=spell.id%>?_method=DELETE" method="POST">
+                    <input class="delete" type="submit" value="Delete">
+                </form>
+            </div>
+         </div>
+        <%- include('partials/script.ejs') %>
+    </body>
 </html>
