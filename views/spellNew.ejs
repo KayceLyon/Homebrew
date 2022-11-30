@@ -28,20 +28,20 @@
                 </div>
                     <fieldset class="cell small-12 medium-12 large-9">
                         <legend>School of Magic:</legend>
-                        <input type="radio" name="school" value="A" id="schoolAbjuration"><label for="schoolAbjuration">Abjuration</label>
-                        <input type="radio" name="school" value="C" id="schoolConjuration" required><label for="schoolConjuration">Conjuration</label>
-                        <input type="radio" name="school" value="D" id="schoolDivination"><label for="schoolDivination">Divination</label>
-                        <input type="radio" name="school" value="EN" id="schoolEnvocation"><label for="schoolEnvocation">Envocation</label>
-                        <input type="radio" name="school" value="EV" id="schoolEvocation"><label for="schoolEvocation">Evocation</label>
-                        <input type="radio" name="school" value="I" id="schoolIllusion"><label for="schoolIllusion">Illusion</label>
-                        <input type="radio" name="school" value="N" id="schoolNecromancy"><label for="schoolNecromancy">Necromancy</label>
-                        <input type="radio" name="school" value="T" id="schoolTransmutation"><label for="schoolTransmutation">Transmutation</label>
+                        <input type="radio" name="school" value="Abjuration" id="schoolAbjuration"><label for="schoolAbjuration">Abjuration</label>
+                        <input type="radio" name="school" value="Conjuration" id="schoolConjuration" required><label for="schoolConjuration">Conjuration</label>
+                        <input type="radio" name="school" value="Divination" id="schoolDivination"><label for="schoolDivination">Divination</label>
+                        <input type="radio" name="school" value="Envocation" id="schoolEnvocation"><label for="schoolEnvocation">Envocation</label>
+                        <input type="radio" name="school" value="Evocation" id="schoolEvocation"><label for="schoolEvocation">Evocation</label>
+                        <input type="radio" name="school" value="Illusion" id="schoolIllusion"><label for="schoolIllusion">Illusion</label>
+                        <input type="radio" name="school" value="Necromancy" id="schoolNecromancy"><label for="schoolNecromancy">Necromancy</label>
+                        <input type="radio" name="school" value="Transmutation" id="schoolTransmutation"><label for="schoolTransmutation">Transmutation</label>
                         <span class="form-error"> School of magic required.</span>
                     </fieldset>
                     <fieldset class="cell small-6 medium-2 large-2">
                         <legend>Ritual:</legend>
-                        <input type="radio" name="ritual" value="YES" id="pokemonRed"><label for="pokemonRed">Yes</label>
-                        <input type="radio" name="ritual" value="NO" id="pokemonBlue" required><label for="pokemonBlue">No</label>
+                        <input type="radio" name="ritual" value="Yes" id="ritualY"><label for="ritualY">Yes</label>
+                        <input type="radio" name="ritual" value="No" id="ritualN" required><label for="ritualN">No</label>
                     </fieldset>
                 <div class="cell small-6 medium-3 large-4">
                     <legend>Casting Time:</legend>
@@ -51,6 +51,7 @@
                 <div class="cell small-6 medium-4 large-4">
                     <legend>Casting Time: (Type)</legend>
                     <select id="timeSelect" name="castingType" required>
+                        <option value=""></option>
                         <option value="action">Action(s)</option>
                         <option value="bonus action">Bonus Action(s)</option>
                         <option value="hour">Hour(s)</option>
@@ -64,6 +65,7 @@
                 <div class="cell small-6 medium-4 large-4">
                     <legend>Range: (Type)</legend>
                     <select id="timeSelect" name="rangeType" required>
+                        <option value=""></option>
                         <option value="Self">Self</option>
                         <option value="Touch">Touch</option>
                         <option value="Ranged">Ranged</option>
@@ -80,6 +82,7 @@
                 <div class="cell small-6 medium-4 large-4">
                     <legend>Area of Effect: (Type)</legend>
                     <select id="timeSelect" name="aeoType" required>
+                        <option value=""></option>
                         <option value="Cone">Cone</option>
                         <option value="Cube">Cube</option>
                         <option value="Cylinder">Cylinder</option>
@@ -108,6 +111,7 @@
                 <div class="cell small-4 medium-4 large-4">
                     <legend>Duration Type:</legend>
                     <select id="durationSelect" name="durationType" required>
+                        <option value=""></option>
                         <option value="Concentration">Concentration</option>
                         <option value="Instantaneous">Instantaneous</option>
                         <option value="Special">Special</option>
@@ -138,6 +142,7 @@
                 <div class="cell small-12 medium-4 large-4">
                     <legend>Available for Class(es):</legend>
                     <select multiple id="select" name="classes" required>
+                        <option value=""></option>
                         <option value="Artificer">Artificer</option>
                         <option  value="Artificer (Alchemist)">Artificer (Alchemist)</option>
                         <option  value="Artificer (Armorer)">Artificer (Armorer)</option>
@@ -248,6 +253,7 @@
                 <div class="cell small-4 medium-4 large-4">
                     <legend>Die Type:</legend>
                     <select id="select" name="roll" required>
+                        <option value=""></option>
                         <option value="d4">d4</option>
                         <option value="d6">d6</option>
                         <option value="d8">d8</option>
@@ -258,12 +264,13 @@
                 </div>
                 <fieldset class="cell small-12 medium-3 large-2">
                     <legend>Higher Level Scale?:</legend>
-                    <input type="radio" name="scale" value=true id="pokemonRed"><label for="pokemonRed">Yes</label>
-                    <input type="radio" name="scale" value=false id="pokemonBlue" required><label for="pokemonBlue">No</label>
+                    <input type="radio" name="scale" value=true id="higherScaleY"><label for="higherScaleY">Yes</label>
+                    <input type="radio" name="scale" value=false id="higherScaleN" required><label for="higherScaleN">No</label>
                 </fieldset>
                 <div class="cell small-6 medium-3 large-3">
                     <legend>Scaling Type:</legend>
                     <select id="select" name="scalingType" required>
+                        <option value=""></option>
                         <option value="Character Level">Character Level</option>
                         <option value="Spell Scale">Spell Scale</option>
                         <option value="Spell Level">Spell Level</option>
@@ -272,6 +279,7 @@
                 <div class="cell small-6 medium-2 large-2">
                     <legend>Saving Throw:</legend>
                     <select id="select" name="saveThrow" required>
+                        <option value=""></option>
                         <option value="Strength">STR</option>
                         <option value="Dexterity">DEX</option>
                         <option value="Constitution">CON</option>
