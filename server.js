@@ -27,6 +27,7 @@ const racesController = require('./controllers/racesController.js');
 const spellsController = require('./controllers/spellsController.js');
 const subclassesController = require('./controllers/subclassesController.js');
 const weaponsController = require('./controllers/weaponsController.js');
+const compendiumSpellsController = require('./controllers/compendiumSpellsController.js')
 
 const isAuthenticated = (req, res, next) => {
     if (req.session.currentUser) {
@@ -65,6 +66,7 @@ app.use('/races', isAuthenticated, racesController);
 app.use('/spells', isAuthenticated, spellsController);
 app.use('/subclasses', isAuthenticated, subclassesController);
 app.use('/weapons', isAuthenticated, weaponsController);
+app.use('/compendiumSpells', isAuthenticated, compendiumSpellsController);
 
 app.get('/', (req, res) => {
       res.render(
