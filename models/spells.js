@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const spellSchema = new Schema ({
-    name: {type: String, required: true},
+    name: {type: String},
     level: {type: Number},
     school: {type: String},
     ritual: {type: String},
