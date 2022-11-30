@@ -17,6 +17,9 @@
                 <a href="/spells/<%=spell.id%>/edit">
                     <button class="button">Edit</button>
                 </a>
+                <form action="/spells/<%=spell.id%>?_method=DELETE" method="POST">
+                    <button class="button" type="submit" value="Delete"></button>
+                </form>
                 <p><%=spell.school%></p>
                 <p><%=spell.level%></p>
                 <p><%=spell.time%></p>
@@ -28,9 +31,7 @@
         </div>
                    
                     
-                <form action="/spells/<%=spell.id%>?_method=DELETE" method="POST">
-                    <button class="button" type="submit" value="Delete"></button>
-                </form>
+                
             </div>
          </div>
         <%- include('partials/script.ejs') %>
