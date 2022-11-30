@@ -20,8 +20,9 @@
             </h4>
               <p>Level: <%=spell[i].level%></p>
               <p>Description: <%=spell[i].description%></p>
+              <p>Classes:
               <% for(let j = 0; j < spell[i].classes.length; j++) {%>
-                <p>Classes: <%=spell[i].classes[j]%></p>
+                 <%=spell[i].classes[j]%>,</p>
              <% } %>
               </div>
             </div>
