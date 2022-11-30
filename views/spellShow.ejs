@@ -14,6 +14,9 @@
               <div class="card-section">
               <h3>
                 <h1><%=spell.name%></h1><hr>
+                <a href="/spells/<%=spell.id%>/edit">
+                    <button class="button">Edit</button>
+                </a>
                 <p><%=spell.school%></p>
                 <p><%=spell.level%></p>
                 <p><%=spell.time%></p>
@@ -24,9 +27,7 @@
           </div>
         </div>
                    
-                    <a href="/spells/<%=spell.id%>/edit">
-                        <button class="edit">Edit</button>
-                    </a>
+                    
                 <form action="/spells/<%=spell.id%>?_method=DELETE" method="POST">
                     <input class="delete" type="submit" value="Delete">
                 </form>
