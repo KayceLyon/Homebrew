@@ -1,7 +1,7 @@
 # Homebrew
 A CRUD app for creating homebrew elements in D&amp;D 5e.
 
-This site was deployed using [Heroku](https://homebrew-checker.herokuapp.com/).
+This site can be found [here](https://homebrew-checker.herokuapp.com/).
 
 Technologies Used: Heroku, MongoDB, Express/Node.js, Mongoose, Foundations (Styling).
 
