@@ -6,11 +6,22 @@
 </head>
 <body>
     <%- include('partials/nav.ejs') %>
-    <div class="container">
-        <h1>Create New Spell</h1>
-        <form action="/spells" method="POST" data-abide novalidate>
-            <input type="text" name="name" placeholder="Spell Name" required pattern="text">
-            <input type="submit" value="Add Spell">
+    <div class="grid-container">
+        <h1>Create New Spell</h1><hr>
+        <form action="spells" method="POST" data-abide novalidate>
+            <div class="grid-x grid-margin-x">
+              <div class="cell">
+                <div data-abide-error class="alert callout" style="display: none;">
+                  <p><i class="fi-alert"></i> There are some errors in your form.</p>
+                </div>
+              </div>
+            </div><div class="grid-x grid-margin-x">
+                <div class="cell small-6 medium-6 large-2">
+                    <label>Spell Name:
+                    <input type="text" name="name" placeholder="Spell Name" required pattern="text">
+                    <span class="form-error"> Spell name required.</span>
+                    </label>
+                </div>
         </form>
     </div>
     <%- include('partials/script.ejs') %>
