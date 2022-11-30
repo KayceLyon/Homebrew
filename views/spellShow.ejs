@@ -22,52 +22,57 @@
             </div>
                 <div class="grid-x grid-margin-x">
                     <div class="cell small-3 medium-3 large-3">
-                        <p><strong>Level:</strong> 
+                        <p><strong>Level:</strong></p> 
                     </div>
                     <div class="cell small-3 medium-3 large-3">
-                        <p><strong> Casting Time:</strong></p>
+                        <p><strong>Casting Time:</strong></p> 
                     </div>
                     <div class="cell small-3 medium-3 large-3">
-                        <p><strong>School of Magic:</strong></p>
+                        <p><strong>Range:</strong></p> 
                     </div>
                     <div class="cell small-3 medium-3 large-3">
-                        <p><strong> Ritual:</strong></p>
-                    </div>
-                    <div class="cell small-3 medium-3 large-3">
-                        <p><%=spell.level%></p>
-                    </div>
-                    <div class="cell small-3 medium-3 large-3">
-                        <p><%=spell.castingTime%> <%=spell.castingType%></p>
-                    </div>
-                    <div class="cell small-3 medium-3 large-3">
-                        <p><%=spell.school%></p>
-                    </div>
-                    <div class="cell small-3 medium-3 large-3">
-                        <p><%=spell.ritual%></p>
+                        <p><strong>Area of Effect:</strong></p> 
                     </div>
 
                     <div class="cell small-3 medium-3 large-3">
-                        <p><strong>Components:</strong></p>
+                        <p><strong><%=spell.level%></strong></p> 
                     </div>
                     <div class="cell small-3 medium-3 large-3">
-                        <p><strong>Materials:</strong></p>
+                        <p><strong><%=spell.castingType%> <%=spell.castingTime%></strong></p> 
                     </div>
                     <div class="cell small-3 medium-3 large-3">
-                        <p><strong>Duration:</strong></p>
+                        <p><strong><%=spell.angeType%> <%=spell.ange%></strong></p> 
                     </div>
                     <div class="cell small-3 medium-3 large-3">
-                        <p><strong>Attack:</strong></p>
+                        <p><strong><%=spell.aoeType%> <%=spell.aoeSize%></strong></p> 
+                    </div>
+
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><strong>Duration:</strong></p> 
+                    </div>
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><strong>School of Magic:</strong></p> 
+                    </div>
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><strong>Components:</strong></p> 
+                    </div>
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><strong>Ritual:</strong></p> 
+                    </div>
+
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><strong><%=spell.durationType%>: <%=spell.duration%> <%=spell.length%></strong></p> 
+                    </div>
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><strong><%=spell.school%></strong></p> 
+                    </div>
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><strong><%=spell.components%></strong></p> 
+                    </div>
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><strong><%=spell.ritual%></strong></p> 
                     </div>
                     
-                    <div class="cell small-3 medium-3 large-3">
-                        <p><%=spell.components%></p>
-                    </div>
-                    <div class="cell small-3 medium-3 large-3">
-                        <p><%=spell.materials%></p>
-                    </div>
-                    <div class="cell small-3 medium-3 large-3">
-                        <p><%=spell.durationType%>: <%=spell.duration%> <%=spell.length%></p>
-                    </div>
                 </div>
             </div>
         <%- include('partials/script.ejs') %>

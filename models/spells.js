@@ -14,7 +14,7 @@ const spellSchema = new Schema ({
     aoeSize: {type: Number},
     components: [String],
     materials: {type: String},
-    durationType: {type: String, }, 
+    durationType: {type: String}, 
     duration: {type: Number}, 
     length: {type: String},
     description: {type: String},
