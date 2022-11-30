@@ -98,7 +98,13 @@
                 </div>
             </div>
             <div class="grid-container">
-                <h3><%=spell.description%></h3><hr>
+                <div class="grid-x align-right">
+                    <h3>Description:</h3><hr>
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><%=spell.description%></p> 
+                    </div>
+                </div>
+            </div>
         <%- include('partials/script.ejs') %>
     </body>
 </html>
