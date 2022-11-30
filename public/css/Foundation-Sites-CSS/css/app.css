@@ -164,9 +164,13 @@
     outline: inherit;
   }
 
-  .login {
+  .headerText {
     text-align: center;
     margin-top: 75px;
+    margin-bottom: 20px;
+  }
+
+  .h1Text {
     margin-bottom: 20px;
   }
 
