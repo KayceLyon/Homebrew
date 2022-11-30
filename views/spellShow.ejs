@@ -7,70 +7,69 @@
 <body>
     <%- include('partials/nav.ejs') %>
     <div class="grid-container">
-                    <h1><%=spell.name%></h1><hr>
-                <div class="grid-x align-right">
-                    <div class="cell small-1 medium-1 large-1">
+        <h1><%=spell.name%></h1><hr>
+            <div class="grid-x align-right">
+                <div class="cell small-1 medium-1 large-1">
                     <a href="/spells/<%=spell.id%>/edit">
                         <button class="button">Edit</button>
                     </a>
                 </div>
-                <div class="cell small-1 medium-1 large-1">
-                    <form action="/spells/<%=spell.id%>?_method=DELETE" method="POST">
-                        <button class="button" type="submit" value="Delete">Delete</button>
-                    </form>
-                    </div>
-                    </div>
-                    <div class="grid-x grid-margin-x">
-                        <div class="cell small-3 medium-3 large-3">
-                            <p><strong>Level:</strong> 
-                        </div>
-                        <div class="cell small-3 medium-3 large-3">
-                            <p><strong>School of Magic:</strong></p>
-                        </div>
-                        <div class="cell small-3 medium-3 large-3">
-                            <p><strong> Casting Time:</strong></p>
-                        </div>
-                        <div class="cell small-3 medium-3 large-3">
-                            <p><strong> Ritual:</strong></p>
-                        </div>
-                        <div class="cell small-3 medium-3 large-3">
-                            <p><%=spell.level%></p>
-                        </div>
-                        <div class="cell small-3 medium-3 large-3">
-                            <p><%=spell.school%></p>
-                        </div>
-                        <div class="cell small-3 medium-3 large-3">
-                            <p><%=spell.castingTime%> <%=spell.castingType%></p>
-                        </div>
-                        <div class="cell small-3 medium-3 large-3">
-                            <p><%=spell.ritual%></p>
-                        </div>
-
-                        <div class="cell small-3 medium-3 large-3">
-                            <p><strong>Components:</strong></p>
-                        </div>
-                        <div class="cell small-3 medium-3 large-3">
-                            <p><strong>Materials:</strong></p>
-                        </div>
-                        <div class="cell small-3 medium-3 large-3">
-                            <p><strong>Duration:</strong></p>
-                        </div>
-                        <div class="cell small-3 medium-3 large-3">
-                            <p><strong>Attack:</strong></p>
-                        </div>
-                        
-                        <div class="cell small-3 medium-3 large-3">
-                            <p><%=spell.components%></p>
-                        </div>
-                        <div class="cell small-3 medium-3 large-3">
-                            <p><%=spell.materials%></p>
-                        </div>
-                        <div class="cell small-3 medium-3 large-3">
-                            <p><%=spell.durationType%>: <%=spell.duration%> <%=spell.length%></p>
-                        </div>
-
+            <div class="cell small-1 medium-1 large-1">
+                <form action="/spells/<%=spell.id%>?_method=DELETE" method="POST">
+                    <button class="button" type="submit" value="Delete">Delete</button>
+                </form>
             </div>
-          </div>
+            </div>
+                <div class="grid-x grid-margin-x">
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><strong>Level:</strong> 
+                    </div>
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><strong>School of Magic:</strong></p>
+                    </div>
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><strong> Casting Time:</strong></p>
+                    </div>
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><strong> Ritual:</strong></p>
+                    </div>
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><%=spell.level%></p>
+                    </div>
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><%=spell.school%></p>
+                    </div>
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><%=spell.castingTime%> <%=spell.castingType%></p>
+                    </div>
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><%=spell.ritual%></p>
+                    </div>
+
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><strong>Components:</strong></p>
+                    </div>
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><strong>Materials:</strong></p>
+                    </div>
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><strong>Duration:</strong></p>
+                    </div>
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><strong>Attack:</strong></p>
+                    </div>
+                    
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><%=spell.components%></p>
+                    </div>
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><%=spell.materials%></p>
+                    </div>
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><%=spell.durationType%>: <%=spell.duration%> <%=spell.length%></p>
+                    </div>
+                </div>
+            </div>
         <%- include('partials/script.ejs') %>
     </body>
 </html>
