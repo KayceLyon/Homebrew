@@ -1,109 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <%- include('partials/head.ejs') %>
-    <title>New Spell</title>
-</head>
-<body>
-    <%- include('partials/nav.ejs') %>
-    <div class="grid-container">
-        <h1>Create New Spell</h1><hr>
-    <form data-abide novalidate>
-        <div class="grid-x grid-margin-x">
-        <div class="cell">
-            <div data-abide-error class="alert callout" style="display: none;">
-            <p><i class="fi-alert"></i> There are some errors in your form.</p>
-            </div>
+<form data-abide novalidate>
+    <div class="grid-x grid-margin-x">
+      <div class="cell">
+        <div data-abide-error class="alert callout" style="display: none;">
+          <p><i class="fi-alert"></i> There are some errors in your form.</p>
         </div>
-        </div>
-        <div class="grid-x grid-margin-x">
-        <div class="cell small-6 medium-6 large-2">
-                <label>Spell Name:
-            <input type="text" placeholder="Spell Name" aria-describedby="exampleHelpTextNumber" required pattern="text">
-            <span class="form-error">
-                Spell name required.
-            </span>
-            </label>
-        </div>
-        <div class="cell small-6 medium-6 large-1">
-            <label>Level
-            <input type="number" placeholder="Level" aria-describedby="exampleHelpTextNothing" required pattern="number">
-            </label>
-        </div>
-        <div class="cell small-12">
-            <label>Password Required
-            <input type="password" id="password" placeholder="yeti4preZ" aria-describedby="exampleHelpTextPassword" required >
-            <span class="form-error">
-                I'm required!
-            </span>
-            <p class="help-text" id="exampleHelpTextPassword">Enter a password please.</p>
-            </label>
-        </div>
-        <div class="cell small-12">
-            <label>Re-enter Password
-            <input type="password" placeholder="yeti4preZ" aria-describedby="exampleHelpText2" required pattern="alpha_numeric" data-equalto="password">
-            <span class="form-error">
-                Hey, passwords are supposed to match!
-            </span>
-            </label>
-            <p class="help-text" id="exampleHelpText2">This field is using the `data-equalto="password"` attribute, causing it to match the password field above.</p>
-        </div>
-        </div>
-        <div class="grid-x grid-margin-x">
-        <div class="cell medium-6">
-            <label>URL Pattern, not required, but throws error if it doesn't match the Regular Expression for a valid URL.
-            <input type="text" placeholder="https://get.foundation" pattern="url">
-            </label>
-        </div>
-        <div class="cell medium-6">
-            <label>European Cars, Choose One, it can't be the blank option.
-            <select id="select" required>
-                <option value=""></option>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-            </select>
-            </label>
-        </div>
-        </div>
-        <div class="grid-x grid-margin-x">
-            <fieldset class="cell small-12 medium-12 large-9">
-                <legend>School of Magic:</legend>
-                <input type="radio" name="school" value="A" id="schoolAbjuration"><label for="schoolAbjuration">Abjuration</label>
-                    <input type="radio" name="school" value="C" id="schoolConjuration" required><label for="schoolConjuration">Conjuration</label>
-                    <input type="radio" name="school" value="D" id="schoolDivination"><label for="schoolDivination">Divination</label>
-                    <input type="radio" name="school" value="EN" id="schoolEnvocation"><label for="schoolEnvocation">Envocation</label>
-                    <input type="radio" name="school" value="EV" id="schoolEvocation"><label for="schoolEvocation">Evocation</label>
-                    <input type="radio" name="school" value="I" id="schoolIllusion"><label for="schoolIllusion">Illusion</label>
-                    <input type="radio" name="school" value="N" id="schoolNecromancy"><label for="schoolNecromancy">Necromancy</label>
-                    <input type="radio" name="school" value="T" id="schoolTransmutation"><label for="schoolTransmutation">Transmutation</label>
-                    <span class="form-error"> School of magic required.</span>
-            </fieldset>
-        <fieldset class="cell medium-6">
-            <legend>Choose Your Favorite - not required, you can leave this one blank.</legend>
-            <input type="radio" name="pockets" value="Red" id="pocketsRed"><label for="pocketsRed">Red</label>
-            <input type="radio" name="pockets" value="Blue" id="pocketsBlue"><label for="pocketsBlue">Blue</label>
-            <input type="radio" name="pockets" value="Yellow" id="pocketsYellow"><label for="pocketsYellow">Yellow</label>
-        </fieldset>
-        <fieldset class="cell medium-6">
-            <legend>Check these out</legend>
-            <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-            <input id="checkbox2" type="checkbox" required><label for="checkbox2">Checkbox 2</label>
-            <input id="checkbox3" type="checkbox"><label for="checkbox3">Checkbox 3</label>
-        </fieldset>
-        </div>
-        <div class="grid-x grid-margin-x">
-        <fieldset class="cell medium-6">
-            <button class="button" type="submit" value="Submit">Submit</button>
-        </fieldset>
-        <fieldset class="cell medium-6">
-            <button class="button" type="reset" value="Reset">Reset</button>
-        </fieldset>
-        </div>
-    </form>
+      </div>
     </div>
-</body>
-</html>
-
-
+    <div class="grid-x grid-margin-x">
+      <div class="cell small-12">
+        <label>Number Required
+          <input type="text" placeholder="1234" aria-describedby="exampleHelpTextNumber" required pattern="number">
+          <span class="form-error">
+            Yo, you had better fill this out, it's required.
+          </span>
+        </label>
+        <p class="help-text" id="exampleHelpTextNumber">Here's how you use this input field!</p>
+      </div>
+      <div class="cell small-12">
+        <label>Nothing Required!
+          <input type="text" placeholder="Use me, or don't" aria-describedby="exampleHelpTextNothing" data-abide-ignore>
+        </label>
+        <p class="help-text" id="exampleHelpTextNothing">This input is ignored by Abide using `data-abide-ignore`</p>
+      </div>
+      <div class="cell small-12">
+        <label>Password Required
+          <input type="password" id="password" placeholder="yeti4preZ" aria-describedby="exampleHelpTextPassword" required >
+          <span class="form-error">
+            I'm required!
+          </span>
+        <p class="help-text" id="exampleHelpTextPassword">Enter a password please.</p>
+        </label>
+      </div>
+      <div class="cell small-12">
+        <label>Re-enter Password
+          <input type="password" placeholder="yeti4preZ" aria-describedby="exampleHelpText2" required pattern="alpha_numeric" data-equalto="password">
+          <span class="form-error">
+            Hey, passwords are supposed to match!
+          </span>
+        </label>
+        <p class="help-text" id="exampleHelpText2">This field is using the `data-equalto="password"` attribute, causing it to match the password field above.</p>
+      </div>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <div class="cell medium-6">
+        <label>URL Pattern, not required, but throws error if it doesn't match the Regular Expression for a valid URL.
+          <input type="text" placeholder="https://get.foundation" pattern="url">
+        </label>
+      </div>
+      <div class="cell medium-6">
+        <label>European Cars, Choose One, it can't be the blank option.
+          <select id="select" required>
+            <option value=""></option>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </select>
+        </label>
+      </div>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <fieldset class="cell medium-6">
+        <legend>Choose Your Favorite, and this is required, so you have to pick one.</legend>
+        <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
+        <input type="radio" name="pokemon" value="Blue" id="pokemonBlue" required><label for="pokemonBlue">Blue</label>
+        <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Yellow</label>
+      </fieldset>
+      <fieldset class="cell medium-6">
+        <legend>Choose Your Favorite - not required, you can leave this one blank.</legend>
+        <input type="radio" name="pockets" value="Red" id="pocketsRed"><label for="pocketsRed">Red</label>
+        <input type="radio" name="pockets" value="Blue" id="pocketsBlue"><label for="pocketsBlue">Blue</label>
+        <input type="radio" name="pockets" value="Yellow" id="pocketsYellow"><label for="pocketsYellow">Yellow</label>
+      </fieldset>
+      <fieldset class="cell medium-6">
+        <legend>Check these out</legend>
+        <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+        <input id="checkbox2" type="checkbox" required><label for="checkbox2">Checkbox 2</label>
+        <input id="checkbox3" type="checkbox"><label for="checkbox3">Checkbox 3</label>
+      </fieldset>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <fieldset class="cell medium-6">
+        <button class="button" type="submit" value="Submit">Submit</button>
+      </fieldset>
+      <fieldset class="cell medium-6">
+        <button class="button" type="reset" value="Reset">Reset</button>
+      </fieldset>
+    </div>
+  </form>
