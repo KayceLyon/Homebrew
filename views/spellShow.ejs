@@ -114,6 +114,43 @@
                     </div>
                 </div>
             </div>
+            <div class="grid-container">
+                <hr><h3>Available Classes:</h3><hr>
+                <div class="grid-x grid-margin-x">
+                    <div class="cell small-3 medium-3 large-3">
+                        <% for(let i = 0; i < spell.length; i++) { %>
+                            <% for(let j = 0; j < spell[i].classes.length; j++) { %>
+                                <p><%=spell[i].classes[j]%></p>
+                           <% } %>
+
+                       <% } %>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-container">
+                <hr><h3>Missed Saving Throw:</h3><hr>
+                <div class="grid-x grid-margin-x">
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><%=spell.missedSave%></p> 
+                    </div>
+                </div>
+            </div>
+            <div class="grid-container">
+                <hr><h3>Successful Saving Throw:</h3><hr>
+                <div class="grid-x grid-margin-x">
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><%=spell.successSave%></p> 
+                    </div>
+                </div>
+            </div>
+            <div class="grid-container">
+                <hr><h3>Failed Saving Throw:</h3><hr>
+                <div class="grid-x grid-margin-x">
+                    <div class="cell small-3 medium-3 large-3">
+                        <p><%=spell.failedSave%></p> 
+                    </div>
+                </div>
+            </div>
         <%- include('partials/script.ejs') %>
     </body>
 </html>
