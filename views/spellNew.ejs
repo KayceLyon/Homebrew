@@ -226,39 +226,39 @@
             </div>
             <fieldset class="cell small-12 medium-3 large-2">
                 <legend>Higher Level Scale?:</legend>
-                <input type="radio" name="scale" value="YES" id="pokemonRed"><label for="pokemonRed">Yes</label>
-                <input type="radio" name="scale" value="NO" id="pokemonBlue" required><label for="pokemonBlue">No</label>
+                <input type="radio" name="scale" value=true id="pokemonRed"><label for="pokemonRed">Yes</label>
+                <input type="radio" name="scale" value=false id="pokemonBlue" required><label for="pokemonBlue">No</label>
             </fieldset>
             <div class="cell small-6 medium-3 large-3">
                 <legend>Scaling Type:</legend>
-                <select id="select" required>
-                    <option name="scale" value="Character Level">Character Level</option>
-                    <option name="scale" value="Spell Scale">Spell Scale</option>
-                    <option name="scale" value="Spell Level">Spell Level</option>
+                <select id="select" name="scalingType" required>
+                    <option value="Character Level">Character Level</option>
+                    <option value="Spell Scale">Spell Scale</option>
+                    <option value="Spell Level">Spell Level</option>
                 </select>
             </div>
             <div class="cell small-6 medium-2 large-2">
                 <legend>Saving Throw:</legend>
-                <select id="select" required>
-                    <option name="save" value="Strength">STR</option>
-                    <option name="save" value="Dexterity">DEX</option>
-                    <option name="save" value="Constitution">CON</option>
-                    <option name="save" value="Intelligence">INT</option>
-                    <option name="save" value="Wisdom">WIS</option>
-                    <option name="save" value="Charisma">CHA</option>
+                <select id="select" name="saveThrow" required>
+                    <option value="Strength">STR</option>
+                    <option value="Dexterity">DEX</option>
+                    <option value="Constitution">CON</option>
+                    <option value="Intelligence">INT</option>
+                    <option value="Wisdom">WIS</option>
+                    <option value="Charisma">CHA</option>
                 </select>
             </div>
             <div class="cell small-12 medium-12 large-12">
                 <legend>Effect on Missed Save:</legend>
-                <textarea name="save" required placeholder="Effect on Missed Save"></textarea>
+                <textarea name="missedSave" required placeholder="Effect on Missed Save"></textarea>
             </div>
             <div class="cell small-12 medium-12 large-12">
                 <legend>Effect on Save Success:</legend>
-                <textarea name="save" required placeholder="Effect on Save Success"></textarea>
+                <textarea name="successSave" required placeholder="Effect on Save Success"></textarea>
             </div>
             <div class="cell small-12 medium-12 large-12">
                 <legend>Effect on Save Fail:</legend>
-                <textarea name="save" required placeholder="Effect on Save Fail"></textarea>
+                <textarea name="failSave" required placeholder="Effect on Save Fail"></textarea>
             </div>
             </div>
             <div class="grid-container">
