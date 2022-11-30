@@ -12,7 +12,9 @@ const spellSchema = new Schema ({
     // aoe:[{type: String}, {type: Number}],
     components: [String],
     materials: {type: String},
-    // duration: [{type: String, }, {type: Number}, {type: String}],
+    durationType: {type: String, }, 
+    duration: {type: Number}, 
+    length: {type: String}
     // description: {type: String, },
     // classes: [{type: String, }] ,
     // roll: [{type: Number, type: String, type: Number, }],

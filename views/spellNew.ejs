@@ -51,7 +51,7 @@
             </div>
             <div class="cell small-6 medium-4 large-4">
                 <legend>Casting Time: (Type)</legend>
-                <select id="select" name="castingType" required>
+                <select id="timeSelect" name="castingType" required>
                     <option value="action">Action(s)</option>
                     <option value="bonus action">Bonus Action(s)</option>
                     <option value="hour">Hour(s)</option>
@@ -75,7 +75,7 @@
             </div>
             <div class="cell small-4 medium-4 large-4">
                 <legend>Duration Type:</legend>
-                <select id="select" name="duration" required>
+                <select id="durationSelect" name="duration" required>
                     <option value="Concentration">Concentration</option>
                     <option value="Instantaneous">Instantaneous</option>
                     <option value="Special">Special</option>
@@ -84,7 +84,7 @@
                     <option value="Untill Dipelled or Triggered">Until Dispelled or Triggered</option>
                 </select>
             </div>
-            <!-- <div class="cell small-4 medium-4 large-4">
+            <div class="cell small-4 medium-4 large-4">
                 <legend>Duration:</legend>
                 <input type="number" name="duration" placeholder="Duration" required pattern="number">
                 <span class="form-error"> Number required.</span>
@@ -99,7 +99,7 @@
                     <option name="duration" value="day">Day</option>
                 </select>
             </div>
-            <div class="cell small-12 medium-12 large-12">
+            <!-- <div class="cell small-12 medium-12 large-12">
             <legend>Spell Description:</legend>
                 <textarea name="description" required placeholder="Description"></textarea>
             </div>
