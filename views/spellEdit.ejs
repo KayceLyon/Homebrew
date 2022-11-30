@@ -301,22 +301,3 @@
       <%- include('partials/script.ejs')%>
     </body>
     </html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <%- include('partials/headEdit.ejs') %>
-    <title>Edit Weapon</title>
-</head>
-<body>
-    <%- include('partials/nav.ejs') %> 
-    <div class="container">
-        <h1>Edit Weapon</h1>
-        <form action="/spells/<%=spell._id%>?_method=PUT" method="POST">
-            <input type="text" name="name" value=<%=spell.name%> placeholder="Name">
-            <input type="submit" value="Edit Spell">
-        </form>
-    </div>
-    <%- include('partials/scriptEdit.ejs') %>
-</body>
-</html>
